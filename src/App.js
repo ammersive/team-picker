@@ -1,11 +1,11 @@
 // import './App.css';
 import Header from "./components/Header";
-import AddPlayers from "./components/AddPlayers";
+import AddPlayer from "./components/AddPlayer";
 
 const App = () => (
   <>
-      <Header>Hello, world!</Header>
-      <AddPlayers />
+      <Header>Heading</Header>
+      <AddPlayer />
   </>
 );
 

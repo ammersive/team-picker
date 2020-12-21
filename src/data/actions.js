@@ -1,10 +1,9 @@
 // Action creators:
 // Functions which return an action when called (from a component wrapper)
 
-export const savePlayers = ({ players }) => {
-  console.log(players);
+export const savePlayer = ({ player }) => {
   return {
-    type: "SAVE_PLAYERS",
-    players: players,
+    type: "SAVE_PLAYER",
+    player: player,
   };
 };
