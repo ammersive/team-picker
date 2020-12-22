@@ -19,3 +19,9 @@ export const shuffleTeams = () => {
     type: "RANDOMISE_TEAMS",
   };
 };
+
+export const generateName = () => {
+  return {
+    type: "GENERATE_NAME",
+  };
+};
