@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ResetGame from "./ResetGame";
+import Reset from "./Reset";
 import { reset } from "../../data/actions";
 
 const mapDispatchToProps = (dispatch) => { 
@@ -8,4 +8,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(ResetGame);
+export default connect(null, mapDispatchToProps)(Reset);
