@@ -26,11 +26,17 @@ const randomiseTeams = (state) => {
   };
 };
 
-const generateName = (state) => {
+const generateName1 = (state) => {
   return {
     ...state,
-    team1Name: "Bob", 
-    team2Name: "Bill",   
+    team1Name: "Bob",   
+  }; 
+};
+
+const generateName2 = (state) => {
+  return {
+    ...state,
+    team2Name: "Bella",   
   }; 
 };
 
@@ -39,7 +45,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
-    case "GENERATE_NAME": return generateName(state);
+    case "GENERATE_NAME1": return generateName1(state);
+    case "GENERATE_NAME2": return generateName2(state);
     default: return state;
   }
 };

@@ -20,8 +20,14 @@ export const shuffleTeams = () => {
   };
 };
 
-export const generateName = () => {
+export const generateName1 = () => {
   return {
-    type: "GENERATE_NAME",
+    type: "GENERATE_NAME1",
+  };
+};
+
+export const generateName2 = () => {
+  return {
+    type: "GENERATE_NAME2",
   };
 };
