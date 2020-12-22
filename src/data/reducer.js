@@ -1,5 +1,68 @@
 // import initial from "./initial"; // use initial state for reset
 
+const adjectives = [
+  "Flying",
+  "Furious",
+  "Surging",
+  "Majestic",
+  "Dazzling",
+  "Mighty",
+  "Waddling",
+  "Dribbling",
+  "Tottering",
+  "Shambling",
+  "Staggering",
+  "Stumbling",
+  "Doddering",
+  "Toddling",
+  "Shambolic"
+];
+
+const everydayWords = [
+  "Foot",
+  "Toe",
+  "Heel",
+  "Hamstrung",
+  "Knee",
+  "Tootsie",
+  "Hoof",
+  "Trotter",
+  "Boot",
+  "Trainer",
+  "Chair",
+  "Deckchair",
+  "Couch",
+  "Sofa",
+  "Beer"
+];
+
+const nouns = [
+  "Colonels",
+  "Crushers",
+  "Divas",
+  "Amigos",
+  "Stars",
+  "Typhoons",
+  "Ladies",
+  "Boys",
+  "Squirrels",
+  "Brigade",
+  "Foxes",
+  "Heroes",
+  "Wolves"
+];
+
+const generateName = () => {
+  let adjective = adjectives[(Math.floor(Math.random() * adjectives.length))];  
+  let everyday = everydayWords[(Math.floor(Math.random() * everydayWords.length))]; 
+  let noun = nouns[(Math.floor(Math.random() * nouns.length))]; 
+  
+  let teamName = `${adjective} ${everyday} ${noun}`;
+
+  return {
+    teamName,
+  }
+}
 
 // Take values set in the ADD_PLAYER action and update the state with these new values
 // Second arg in curlies are properties of the action, necessary here
@@ -27,19 +90,20 @@ const randomiseTeams = (state) => {
 };
 
 const generateName1 = (state) => {
+  let name = generateName().teamName;
   return {
     ...state,
-    team1Name: "Bob",   
+    team1Name: name,
   }; 
 };
 
 const generateName2 = (state) => {
+  let name = generateName().teamName;
   return {
     ...state,
-    team2Name: "Bella",   
+    team2Name: name,
   }; 
 };
-
 
 const reducer = (state, action) => {
   switch (action.type) {
