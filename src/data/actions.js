@@ -31,3 +31,9 @@ export const generateName2 = () => {
     type: "GENERATE_NAME2",
   };
 };
+
+export const reset = () => {
+  return {
+    type: "RESET",
+  };
+};

@@ -1,4 +1,4 @@
-// import initial from "./initial"; // use initial state for reset
+import initial from "./initial"; // use initial state for reset
 
 const adjectives = [
   "Flying",
@@ -111,6 +111,7 @@ const reducer = (state, action) => {
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);
+    case "RESET": return initial;
     default: return state;
   }
 };
