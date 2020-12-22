@@ -1,8 +1,9 @@
-// import initial from "./initial"; // for reset
+// import initial from "./initial"; // use initial state for reset
 
-// Take values set in the SAVE_PLAYERS action and updates the state with these new values
+
+// Take values set in the ADD_PLAYER action and update the state with these new values
 // Second arg in curlies are properties of the action, necessary here
-const savePlayer = (state, { player }) => {
+const addPlayer = (state, { player }) => {
   return {
     ...state,
     players: [...state.players, player],    
@@ -11,7 +12,7 @@ const savePlayer = (state, { player }) => {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SAVE_PLAYER": return savePlayer(state, action);
+    case "ADD_PLAYER": return addPlayer(state, action);
     default: return state;
   }
 };

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 
 import AddPlayer from "./AddPlayer";
 
-import { savePlayer } from "../../data/actions";
+import { addPlayer } from "../../data/actions";
 
 const mapStateToProps = state => {
   return {
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleSave: data => dispatch(savePlayer(data)),
+    handleSave: data => dispatch(addPlayer(data)),
   };
 };
 
