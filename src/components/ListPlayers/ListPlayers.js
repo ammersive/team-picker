@@ -2,10 +2,13 @@ const ListPlayers = ({ players }) => {
   let message = "";
 
   if ((players.length % 2 === 0) && (players.length > 0)) {
-    message = "Even teams, great!";
+    message = `${players.length} players added. Even teams, great!`;
+  }
+  else if (players.length === 1) {
+    message = `${players.length} player added. Teams will be uneven...`;
   }
   else if (players.length % 2 === 1) {
-    message = "Teams will be uneven...";
+    message = `${players.length} players added. Teams will be uneven...`;
   }; 
 
   return (
@@ -15,7 +18,7 @@ const ListPlayers = ({ players }) => {
           <li key={ index }>{ element }</li> 
         )) } 
       </ul>
-      <p> { message }</p>
+      <p>{ message }</p>
     </>
   );
 };
