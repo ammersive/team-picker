@@ -1,9 +1,9 @@
 const initial = {
   players: [], 
-  team1: ["Bob", "Erika", "Dickens"],
-  team2: ["Poofus", "Doofus", "Floof"],
-  team1Name: "Team AWESOME",
-  team2Name: "Team FLOOF",
+  team1: [],
+  team2: [],
+  team1Name: "Team Awesome",
+  team2Name: "Team The Best",
 };
 
 export default initial;

@@ -7,3 +7,9 @@ export const addPlayer = ({ player }) => {
     player: player,
   };
 };
+
+export const createTeams = () => {
+  return {
+    type: "CREATE_TEAMS",
+  };
+};
