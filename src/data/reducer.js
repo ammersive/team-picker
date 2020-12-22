@@ -11,10 +11,18 @@ const addPlayer = (state, { player }) => {
 };
 
 const createTeams = (state) => {
+  let players = [...state.players];
+  let shuffledPlayers = [];
+
+  for (let i = players.length; i > 0; i--) {
+    let pick = players.splice(Math.floor(Math.random() * i), 1);
+    shuffledPlayers.push(pick[0]);
+  };
+
   return {
     ...state,
-    team1: [...state.players, "New player from reducer"],    
-    team2: [...state.players, "Another new player from reducer"],    
+    team1: shuffledPlayers.slice(0, (shuffledPlayers.length / 2)),    
+    team2: shuffledPlayers.slice(shuffledPlayers.length / 2),    
   };
 };
 
