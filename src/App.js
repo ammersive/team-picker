@@ -1,13 +1,10 @@
-// import './App.css';
 import Header from "./components/Header";
-import AddPlayer from "./components/AddPlayer";
 import NewPlayers from "./components/NewPlayers";
 
-const App = ({ players }) => (
+const App = () => (
   <>
-      <Header>Heading</Header>
-      <AddPlayer />
-      <NewPlayers />
+    <Header>Heading</Header>
+    <NewPlayers />
   </>
 );
 
