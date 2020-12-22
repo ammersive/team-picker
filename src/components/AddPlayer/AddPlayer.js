@@ -17,8 +17,13 @@ class AddPlayer extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.handleSave({ ...this.state }); 					
-		this.setState({ player: "" });	
+		if (this.state.player === "") {
+			alert("You cannot add a nameless player!");
+			// return true; // <- the alert-free option
+    } else {
+		this.props.handleSave({ ...this.state });				
+		this.setState({ player: "" });
+		};	
 	}
 
 	render() {
