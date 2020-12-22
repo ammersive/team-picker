@@ -7,7 +7,6 @@ const NewPlayers = ({ players }) => (
   <>
     <AddPlayer />
     <ListPlayers players={ players }/>
-    <p>{ players.length % 2 === 1 ? "Teams will be uneven..." : "Even teams, lovely!" }</p>    
     <CreateTeams />
     <Reset buttonText={ "Clear these players" }/>
   </>
