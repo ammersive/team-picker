@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class CreateTeams extends Component {
+class Reshuffle extends Component {
   constructor(props) {
     super(props);
 
@@ -8,14 +8,14 @@ class CreateTeams extends Component {
   }
 
   handleClick() {    
-    this.props.createClick();
+    this.props.shuffleClick();
   }
 
   render() {
     return(
-      <button onClick={ this.handleClick }>Create Teams</button>
+      <button onClick={ this.handleClick }>Reshuffle</button>
     );
   }
 }
 
-export default CreateTeams;
+export default Reshuffle;

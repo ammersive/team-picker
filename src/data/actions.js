@@ -10,6 +10,12 @@ export const addPlayer = ({ player }) => {
 
 export const createTeams = () => {
   return {
-    type: "CREATE_TEAMS",
+    type: "RANDOMISE_TEAMS",
+  };
+};
+
+export const shuffleTeams = () => {
+  return {
+    type: "RANDOMISE_TEAMS",
   };
 };

@@ -10,7 +10,7 @@ const addPlayer = (state, { player }) => {
   }; // Following this, the above are now part of state, so we don't pass them in as actions below
 };
 
-const createTeams = (state) => {
+const randomiseTeams = (state) => {
   let players = [...state.players];
   let shuffledPlayers = [];
 
@@ -29,7 +29,7 @@ const createTeams = (state) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
-    case "CREATE_TEAMS": return createTeams(state);
+    case "RANDOMISE_TEAMS": return randomiseTeams(state);
     default: return state;
   }
 };
