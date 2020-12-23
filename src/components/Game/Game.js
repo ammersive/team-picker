@@ -10,7 +10,7 @@ const Game = () => (
     <Team1 />
     <Reshuffle />
     <Team2 />
-    <Reset buttonText={ "Reset Game" }/>    
+    <Reset buttonText={ "Reset Game" }/>       
   </>
 );
 
