@@ -8,6 +8,12 @@ export const addPlayer = ({ player }) => {
   };
 };
 
+export const drawPlayer = () => {
+  return {
+    type: "DRAW_PLAYER"
+  };
+};
+
 export const createTeams = () => {
   return {
     type: "RANDOMISE_TEAMS",

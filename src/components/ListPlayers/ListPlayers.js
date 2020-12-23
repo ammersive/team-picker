@@ -11,7 +11,7 @@ const ListPlayers = ({ players }) => {
     message = `${players.length} players added. Teams will be uneven...`;
   }; 
 
-  return (
+  return ( 
     <>
       <ul> 
         { players.map((element, index) => (            

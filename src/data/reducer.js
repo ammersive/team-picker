@@ -73,6 +73,26 @@ const addPlayer = (state, { player }) => {
   }; // Following this, the above are now part of state, so we don't pass them in as actions below
 };
 
+const drawPlayer = (state) => {
+  // sort bank of players by play count
+  let sortedBank = state.bank.sort(( a, b ) => a.playCount - b.playCount);
+  
+  // While a player in bank has already been picked, increment pickedTracker
+  while (state.picked.includes(sortedBank[state.pickedTracker].name)) {
+    state.pickedTracker += 1;
+  };
+
+  // Now pickedTracker indicates a player with the lowest playcount, who has not already been picked 
+  let lowestPlaysPlayer = sortedBank[state.pickedTracker].name;
+
+  return {
+    ...state,
+    picked: [...state.picked, lowestPlaysPlayer],
+    pickedTracker: state.pickedTracker + 1, // increment tracker on successful pick too.
+    players: [...state.players, lowestPlaysPlayer],    
+  }; 
+};
+
 const randomiseTeams = (state) => {
   let players = [...state.players];
   let shuffledPlayers = [];
@@ -108,6 +128,7 @@ const generateName2 = (state) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
+    case "DRAW_PLAYER": return drawPlayer(state, action);
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);
