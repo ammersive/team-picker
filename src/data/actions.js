@@ -49,3 +49,9 @@ export const reset = () => {
     type: "RESET",
   };
 };
+
+export const resetBank = () => {  
+  return { 
+    type: "RESET_BANK",
+  };
+};

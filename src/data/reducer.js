@@ -177,6 +177,13 @@ const reset = (state) => {
   }; 
 };
 
+const resetBank = (state) => {
+  window.confirm("Do you want to wipe the bank? This will delete all player information.") ? state.bank = [] : state.bank = [...state.bank];
+  return {
+    ...state,  
+  }; 
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
@@ -186,6 +193,7 @@ const reducer = (state, action) => {
     case "GENERATE_NAME2": return generateName2(state);
     case "SAVE": return save(state);
     case "RESET": return reset(state);;
+    case "RESET_BANK": return resetBank(state);;
     default: return state;
   }
 };
