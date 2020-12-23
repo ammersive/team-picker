@@ -84,7 +84,7 @@ const drawPlayer = (state) => {
   };
 
   // Now pickedTracker indicates a player with the lowest playcount, who has not already been picked 
-  let lowestPlaysPlayer = sortedBank[state.pickedTracker].name;
+  let lowestPlaysPlayer = sortedBank[state.pickedTracker];
 
   return {
     ...state,

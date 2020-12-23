@@ -14,8 +14,8 @@ const ListPlayers = ({ players }) => {
   return ( 
     <>
       <ul> 
-        { players.map((element, index) => (            
-          <li key={ index }>{ element }</li> 
+        { players.map((player, index) => (            
+          <li key={ index }>{ player.name }</li> 
         )) } 
       </ul>
       <p>{ message }</p>
