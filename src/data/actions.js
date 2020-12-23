@@ -38,6 +38,12 @@ export const generateName2 = () => {
   };
 };
 
+export const save = () => {
+  return {
+    type: "SAVE",
+  };
+};
+
 export const reset = () => {
   return {
     type: "RESET",

@@ -126,13 +126,50 @@ const generateName2 = (state) => {
   }; 
 };
 
+const save = (state) => {  
+  //Iterate over players list
+  for (let i = 0; i < state.players.length; i += 1) {
+    // If the bank contains a player whose name matches the current player from the player list
+    if (state.bank.some(player => player.name === state.players[i].name)) {
+      // Then look throuh the bank 
+      for (let bankIndex = 0; bankIndex < state.bank.length; bankIndex += 1) {
+        // Find the relevant player object (by matching the name property of the player object)
+        if (state.bank[bankIndex].name === state.players[i].name) {
+          // and increment its playcount
+          state.bank[bankIndex].playCount += 1;
+        }
+      }
+    }
+    // If control reaches here, the a player of this name doesn't exist in the bank    
+    else {
+      // Add them, with a play-count of 1
+      state.players[i].playCount += 1;
+      // And push them to the bank
+      state.bank.push(state.players[i]);
+    }
+  };
+
+  return {
+    ...state,
+    // Reset all state, except player bank
+    players: [], 
+    team1: [],
+    team2: [],
+    team1Name: "Team 1",
+    team2Name: "Team 2",
+    picked: [],
+    pickedTracker: 0,
+  }; 
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
-    case "DRAW_PLAYER": return drawPlayer(state, action);
+    case "DRAW_PLAYER": return drawPlayer(state);
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);
+    case "SAVE": return save(state);
     case "RESET": return initial;
     default: return state;
   }
