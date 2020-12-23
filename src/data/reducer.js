@@ -75,7 +75,8 @@ const addPlayer = (state, { player }) => {
 
 const drawPlayer = (state) => {
   // sort bank of players by play count
-  let sortedBank = state.bank.sort(( a, b ) => a.playCount - b.playCount);
+  let sortedBank = [...state.bank];
+  sortedBank.sort(( a, b ) => a.playCount - b.playCount);
   
   // While a player in bank has already been picked, increment pickedTracker
   while (state.picked.includes(sortedBank[state.pickedTracker].name)) {
