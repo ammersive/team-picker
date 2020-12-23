@@ -1,4 +1,4 @@
-import initial from "./initial"; // use initial state for reset
+//import initial from "./initial"; // can use initial state for reset
 
 const adjectives = [
   "Flying",
@@ -78,7 +78,7 @@ const drawPlayer = (state) => {
   let sortedBank = [...state.bank];
   sortedBank.sort(( a, b ) => a.playCount - b.playCount);
   
-  // While a player in bank has already been picked, increment pickedTracker
+  // While a player from thein bank has already been picked, increment pickedTracker
   while (state.picked.includes(sortedBank[state.pickedTracker].name)) {
     state.pickedTracker += 1;
   };
@@ -162,6 +162,15 @@ const save = (state) => {
   }; 
 };
 
+const reset = (state) => {
+  return {
+    ...state,
+    players: [],
+    picked: [],
+    pickedTracker: 0,
+  }; 
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
@@ -170,7 +179,7 @@ const reducer = (state, action) => {
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);
     case "SAVE": return save(state);
-    case "RESET": return initial;
+    case "RESET": return reset(state);;
     default: return state;
   }
 };
