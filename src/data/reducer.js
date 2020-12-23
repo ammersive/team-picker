@@ -7,15 +7,14 @@ const adjectives = [
   "Majestic",
   "Dazzling",
   "Mighty",
-  "Waddling",
   "Dribbling",
   "Tottering",
   "Shambling",
   "Staggering",
   "Stumbling",
   "Doddering",
-  "Toddling",
-  "Shambolic"
+  "Shambolic",
+  "Drunken"
 ];
 
 const everydayWords = [
@@ -25,15 +24,14 @@ const everydayWords = [
   "Hamstrung",
   "Knee",
   "Tootsie",
-  "Hoof",
-  "Trotter",
   "Boot",
   "Trainer",
-  "Chair",
+  "ArmChair",
   "Deckchair",
   "Couch",
   "Sofa",
-  "Beer"
+  "Beer",
+  "Lager"
 ];
 
 const nouns = [
@@ -64,13 +62,18 @@ const generateName = () => {
   }
 }
 
-// Take values set in the ADD_PLAYER action and update the state with these new values
-// Second arg in curlies are properties of the action, necessary here
 const addPlayer = (state, { player }) => {
+  
+  // // Attempt to solve unique players issue. Not currently working (only works for certain orders) and probably doomed. think again later!
+  // if (state.bank.some(bankPlayer => bankPlayer.name === player.name)) {
+  //   state.pickedTracker -= 1;
+  //   console.log(state.pickedTracker);  
+  // };
+
   return {
     ...state,
     players: [...state.players, player],    
-  }; // Following this, the above are now part of state, so we don't pass them in as actions below
+  }; 
 };
 
 const drawPlayer = (state) => {
@@ -78,18 +81,18 @@ const drawPlayer = (state) => {
   let sortedBank = [...state.bank];
   sortedBank.sort(( a, b ) => a.playCount - b.playCount);
   
-  // While a player from thein bank has already been picked, increment pickedTracker
-  while (state.picked.includes(sortedBank[state.pickedTracker].name)) {
-    state.pickedTracker += 1;
-  };
+    // // Attempt to solve unique players issue. Not currently working (only works for certain orders) and probably doomed. think again later!
+    // if (state.players.some(player => player.name === sortedBank[state.pickedTracker].name)) {
+    //   console.log(sortedBank[state.pickedTracker].name);  
+    //   state.pickedTracker += 1;
+    // };         
 
-  // Now pickedTracker indicates a player with the lowest playcount, who has not already been picked 
   let lowestPlaysPlayer = sortedBank[state.pickedTracker];
 
   return {
     ...state,
     picked: [...state.picked, lowestPlaysPlayer],
-    pickedTracker: state.pickedTracker + 1, // increment tracker on successful pick too.
+    pickedTracker: state.pickedTracker + 1, // increment tracker on successful pick
     players: [...state.players, lowestPlaysPlayer],    
   }; 
 };
@@ -98,7 +101,10 @@ const randomiseTeams = (state) => {
   let players = [...state.players];
   let shuffledPlayers = [];
 
-  for (let i = players.length; i > 0; i--) {
+  // For genuine (pseudo!)randomness, players are **pulled** at random from players list, and then pushed to front of new list.
+  // This avoids biasing effects: should players be pushed at random into an empty list, those players pushed first will cluster together, before the list grows.
+  // This matters because the player bank always adds players in a predictable order (according to their play-counts) 
+  for (let i = players.length; i > 0; i -= 1) {
     let pick = players.splice(Math.floor(Math.random() * i), 1);
     shuffledPlayers.push(pick[0]);
   };
