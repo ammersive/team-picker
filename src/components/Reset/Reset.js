@@ -1,5 +1,5 @@
 const Reset = ({ clickReset, buttonText }) => (
-  <button onClick={ clickReset }>
+  <button className="clear-players" onClick={ clickReset }>
     {buttonText}
   </button>
 );

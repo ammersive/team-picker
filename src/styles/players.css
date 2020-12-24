@@ -4,10 +4,10 @@
 
 .bank {
   background-color: rgb(232, 214, 207);
-  border: 3px rgb(232, 214, 207) solid;
   border-radius: 20px;
   max-width: 20rem;
   margin: 0rem auto;
+  padding-bottom: 0.5rem;
   text-align: center;  
 }
 
@@ -34,8 +34,37 @@
   padding: 0.3rem 0rem 0.3rem 0.5rem;
 }
 
-.add-players{
+.draw-add-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0rem;
+  border: solid rgb(186, 189, 186) 2px;
+}
 
+.add-players {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 10rem;
+  background-color: rgb(6, 48, 6);
+  padding: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
+  border-radius: 8px;
+}
+
+.add-players button {
+  display: block;
+  margin: 1rem auto 0rem auto;
+  border: 0px;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 8px;    
+}
+
+.clear-bank {
+  background-color: rgb(232, 125, 106);
+  /* font-size: 0.4rem; doesn't render */
 }
 
 .players-list{

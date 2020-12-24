@@ -17,6 +17,19 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.add-players h3 {
+  font-family: 'Nova Flat', cursive;
+  font-size: 1.4rem;
+  color: rgb(240, 223, 223);
+  padding-bottom: 1rem;
+}
+
+.add-players p {
+  font-size: 1rem;
+  color: rgb(240, 223, 223);
+  padding-bottom: 0.5rem;
+}
+
 .team-name {
   text-align: center;
   font-family: 'Nova Flat', cursive;

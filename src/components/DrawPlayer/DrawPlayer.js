@@ -6,7 +6,7 @@ const DrawPlayer = ({ picked, bank, clickDraw }) => (
     clickDraw }
     disabled={ picked.length === bank.length }
   >
-    Draw player from bank
+    Draw
   </button>
 );
 export default DrawPlayer;

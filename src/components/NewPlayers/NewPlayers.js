@@ -14,16 +14,18 @@ const NewPlayers = ({ players, picked, bank }) => (
     <div className="bank">
       <Bank bank={ bank } />
     </div>
-    <div className="add-players">
-      <h3>Draw</h3>
-      <p>Draw players due a game</p>
-      <DrawPlayer picked={ picked } bank={ bank } />
-      <ResetBank buttonText={ "Clear the bank" }/>
-    </div>
-    <div className="add-players">
-      <h3>Choose</h3>
-      <p>Enter chosen or new player</p>
-      <AddPlayer />
+    <div className="draw-add-wrap">
+      <div className="add-players">
+        <h3>Draw</h3>
+        <p>Draw players due a game</p>
+        <DrawPlayer picked={ picked } bank={ bank } />
+        <ResetBank buttonText={ "Clear the bank" }/>
+      </div>
+      <div className="add-players">
+        <h3>Choose</h3>
+        <p>Enter chosen or new player</p>
+        <AddPlayer />
+      </div>
     </div>
     <div className="players-list">
     {/* put inside list when classname */}
