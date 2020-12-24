@@ -13,7 +13,7 @@ class Reshuffle extends Component {
 
   render() {
     return(
-      <button onClick={ this.handleClick }>Reshuffle</button>
+      <button onClick={ this.handleClick }>Reshuffle teams</button>
     );
   }
 }

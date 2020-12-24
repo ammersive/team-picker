@@ -1,0 +1,28 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Nova Flat', cursive;
+  font-size: 5rem;
+  padding: 2.5rem 0.5rem;  
+}
+
+.section-header {
+  text-align: center;
+  background:chartreuse;
+  font-size: 3rem;
+  padding: 2rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.team-name {
+  text-align: center;
+  font-family: 'Nova Flat', cursive;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.5rem 0.5rem;
+}
+
+

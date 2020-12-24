@@ -1,5 +1,5 @@
 const Header = ({ children }) => (
-  <header className="">
+  <header className="header">
     <h1>{ children }</h1>  
   </header>
 );

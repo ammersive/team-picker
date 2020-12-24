@@ -1,0 +1,21 @@
+body {
+  background-color: rgba(127, 255, 212, 0.372);
+}
+
+.header {
+  background-color: lightsalmon;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 34rem;
+  border: solid 3px red;
+}
+
+/* .wrapper * > {
+  margin: 0 auto;
+} */
+
+.section-header {
+
+}
