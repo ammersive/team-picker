@@ -67,10 +67,27 @@
   /* font-size: 0.4rem; doesn't render */
 }
 
-.players-list{
-
+.players-list-wrapper{
+  background-color: thistle;
 }
 
-.create{
-  
+.players-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+
+.player-list-item {
+  background: tomato;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.create button{
+  margin: 1rem;
+  border: 0px;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 8px; 
 }

@@ -27,14 +27,14 @@ const NewPlayers = ({ players, picked, bank }) => (
         <AddPlayer />
       </div>
     </div>
-    <div className="players-list">
+    <div className="players-list-wrapper">
     {/* put inside list when classname */}
       <h3>Picks</h3> 
-      <ListPlayers players={ players }/>
-    </div>
-    <div className="create">
-      <CreateTeams />
-      <Reset buttonText={ "Clear these players" }/>
+      <ListPlayers players={ players }/>    
+      <div className="create">
+        <CreateTeams />
+        <Reset buttonText={ "Clear these players" }/>
+      </div>
     </div>
   </section>
 );

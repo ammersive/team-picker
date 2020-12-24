@@ -13,12 +13,12 @@ const ListPlayers = ({ players }) => {
 
   return ( 
     <>
-      <ul> 
+      <ul className="players-list"> 
         { players.map((player, index) => (            
-          <li key={ index }>{ player.name }</li> 
+          <li className="player-list-item" key={ index }>{ player.name }</li> 
         )) } 
       </ul>
-      <p>{ message }</p>
+      <p className="message">{ message }</p>
     </>
   );
 };
