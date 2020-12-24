@@ -1,11 +1,11 @@
 const Team = ({ teamName, team, generateClick }) => {
   return (
     <>
-      <h2>{ teamName }</h2>
-      <button onClick={ generateClick }>Generate team name</button>
-      <ul> 
+      <h3 className="team-name">{ teamName }</h3>
+      <button className="generate" onClick={ generateClick }>Generate team name</button>
+      <ul className="team-list"> 
         { team.map((player, index) => (            
-          <li key={ index }>{ player.name }</li> 
+          <li className="team-member" key={ index }>{ player.name }</li> 
         )) } 
       </ul>
     </>

@@ -5,13 +5,23 @@ import Reshuffle from "../Reshuffle/";
 import Save from "../Save/";
 
 const Game = () => (
-  <>
-    <h1>Game component:</h1>
-    <Team1 />
-    <Reshuffle />
-    <Team2 />
-    <Save />      
-  </>
+  <section className="wrapper game-wrapper">
+    <header className="section-header">
+      <h2>Teams</h2>
+    </header>
+    <div className="team">
+      <Team1 />
+    </div>
+    <div className="shuffle">
+      <Reshuffle />
+    </div>
+    <div className="team">
+      <Team2 />
+    </div>
+    <div className="save">
+      <Save />
+    </div>      
+  </section>
 );
 
 export default Game;

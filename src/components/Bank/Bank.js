@@ -1,12 +1,22 @@
 const Bank = ({ bank }) => {
   return (
     <>
-      <h3>Bank of players</h3>    
-      <ul> 
-        { bank.map((player, index) => (            
-          <li key={ index }>{ player.name} playcount: {player.playCount }</li> 
-        )) } 
-      </ul>
+      <h3>Player bank</h3> 
+      <table>
+        <thead>
+          <tr>
+              <th colspan="2">Playcounts</th>
+          </tr>
+        </thead>
+        <tbody>
+          { bank.map((player, index) => (
+            <tr>            
+              <td key={ index }>{ player.name} </td>
+              <td key={ index }> {player.playCount }</td>
+            </tr> 
+          )) } 
+        </tbody>   
+      </table>
     </>
   );
 };
