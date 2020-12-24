@@ -11,10 +11,10 @@ const Bank = ({ bank }) => {
         <tbody>
           { bank.map((player, index) => (
             <tr>            
-              <td key={ index }>{ player.name} </td>
-              <td key={ index }> {player.playCount }</td>
+              <td className="player-cell" key={ index }>{ player.name} </td>
+              <td className="play-count-cell" key={ index }> {player.playCount }</td>
             </tr> 
-          )) } 
+          )) }
         </tbody>   
       </table>
     </>

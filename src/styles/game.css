@@ -18,6 +18,8 @@
 }
 
 .generate {
+  position: relative;
+  top: -1rem;
   border: 0px;
   font-size: 0.9rem;
   padding: 0.5rem;

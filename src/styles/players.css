@@ -1,9 +1,37 @@
 .players-wrapper{
-
+  text-align: center;
 }
 
 .bank {
+  background-color: rgb(232, 214, 207);
+  border: 3px rgb(232, 214, 207) solid;
+  border-radius: 20px;
+  max-width: 20rem;
+  margin: 0rem auto;
+  text-align: center;  
+}
 
+.bank table {
+  margin: 1.5rem auto;
+  width: 80%;
+}
+
+.bank tr:nth-child(odd) {
+  background:rgb(67, 210, 129);
+}
+.bank tr:nth-child(even) {
+  background:seagreen;
+}
+
+.bank .player-cell {
+  text-align: right;
+  width: 50%;
+}
+
+.bank .play-count-cell {
+  width: 50%;
+  text-align: left;
+  padding: 0.3rem 0rem 0.3rem 0.5rem;
 }
 
 .add-players{
