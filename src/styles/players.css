@@ -68,7 +68,7 @@
 }
 
 .players-list-wrapper{
-  background-color: thistle;
+  background-color: rgb(232, 214, 207);
 }
 
 .players-list {
@@ -78,7 +78,8 @@
 }
 
 .player-list-item {
-  background: tomato;
+  background-color: rgb(6, 48, 6);
+  color: rgb(232, 214, 207);
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 8px;

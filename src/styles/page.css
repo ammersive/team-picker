@@ -3,12 +3,12 @@ body {
 }
 
 .header {
-  background-color: lightsalmon;
+  background: rgb(6, 48, 6);;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 34rem;
+  max-width: 50rem;
   border: solid 3px red;
 }
 

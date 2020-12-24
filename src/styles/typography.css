@@ -6,12 +6,13 @@ h1 {
   text-align: center;
   font-family: 'Nova Flat', cursive;
   font-size: 5rem;
+  color: rgb(232, 214, 207);
   padding: 2.5rem 0.5rem;  
 }
 
 .section-header {
   text-align: center;
-  background:chartreuse;
+  background-color: rgb(232, 214, 207);
   font-size: 3rem;
   padding: 2rem 0.5rem;
   margin-bottom: 2rem;
@@ -30,24 +31,13 @@ h1 {
   padding-bottom: 0.5rem;
 }
 
-.team-name {
-  text-align: center;
-  font-family: 'Nova Flat', cursive;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  padding: 1.5rem 0.5rem 2rem 0.5rem;
-  background: darkgreen;
-  color: cornsilk;
-  border-radius: 20px 20px 0px 0px;
-}
-
 .bank h3 {
   text-align: center;
   font-family: 'Nova Flat', cursive;
   font-size: 2rem;
   line-height: 2.4rem;
   padding: 1.5rem 0.5rem 2rem 0.5rem;
-  background: darkgreen;
+  background: rgb(6, 48, 6);
   color: cornsilk;
   border-radius: 20px 20px 0px 0px;
 }
@@ -68,4 +58,15 @@ h1 {
 
 .message {
   margin: 1rem;
+}
+
+.team-name {
+  text-align: center;
+  font-family: 'Nova Flat', cursive;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.5rem 0.5rem 2rem 0.5rem;
+  background: rgb(6, 48, 6);
+  color: cornsilk;
+  border-radius: 20px 20px 0px 0px;
 }

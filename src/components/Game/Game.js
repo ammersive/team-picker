@@ -9,14 +9,16 @@ const Game = () => (
     <header className="section-header">
       <h2>Teams</h2>
     </header>
-    <div className="team">
-      <Team1 />
-    </div>
     <div className="shuffle">
       <Reshuffle />
     </div>
-    <div className="team">
-      <Team2 />
+    <div className="teams">
+      <div className="team">
+        <Team1 />
+      </div>    
+      <div className="team">
+        <Team2 />
+      </div>
     </div>
     <div className="save">
       <Save />
