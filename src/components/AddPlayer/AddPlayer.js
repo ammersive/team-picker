@@ -4,7 +4,7 @@ class AddPlayer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			player: { name: "", playCount: 0}
+			player: { name: "", playCount: 0, isPicked: false, isNew: true }
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
