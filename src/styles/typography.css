@@ -1,5 +1,6 @@
 body {
   font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
 }
 
 h1 {
@@ -26,7 +27,7 @@ h1 {
 }
 
 .add-players p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgb(240, 223, 223);
   padding-bottom: 0.5rem;
 }
@@ -34,9 +35,10 @@ h1 {
 .bank h3 {
   text-align: center;
   font-family: 'Nova Flat', cursive;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  padding: 1.5rem 0.5rem 2rem 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 1rem;
+  /* padding: 1.5rem 0.5rem 2rem 0.5rem; */
   background: rgb(6, 48, 6);
   color: cornsilk;
   border-radius: 20px 20px 0px 0px;
@@ -45,9 +47,8 @@ h1 {
 .bank th {
   background-color: cornsilk;  
   font-family: 'Nova Flat', cursive;
-  font-size: 1.2rem;
-  margin: 1rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
 .players-list-wrapper h3 {

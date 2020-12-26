@@ -5,7 +5,7 @@ const Bank = ({ bank }) => {
       <table>
         <thead>
           <tr>
-              <th colspan="2">Playcounts</th>
+              <th >Playcounts</th>
           </tr>
         </thead>
         <tbody>

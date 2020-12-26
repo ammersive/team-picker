@@ -8,7 +8,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 50rem;
+  max-width: 1040px;
   border: solid 3px red;
 }
 
