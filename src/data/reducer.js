@@ -84,17 +84,16 @@ const pickPlayer = (state, { player }) => {
 };
 
 const drawPlayer = (state) => {
-  let sortedBank = [...state.bank];
-  sortedBank.sort(( a, b ) => a.playCount - b.playCount);        
-
-  let lowestPlaysPlayer = sortedBank[state.pickedListTracker];
-  lowestPlaysPlayer.isPicked = true;
+  // Check that at least one unselected player remains in the bank
+  if (state.bank.length > state.players.length) {
+    // If so, filter out selected players, order by fewest plays, and add first player to players list
+    let filteredBank = state.bank.filter( player => player.isPicked === false).sort(( a, b ) => a.playCount - b.playCount); 
+    filteredBank[0].isPicked = true;
+    state.players = [...state.players, filteredBank[0]];
+  };
 
   return {
     ...state,
-    pickedList: [...state.pickedList, lowestPlaysPlayer],
-    pickedListTracker: state.pickedListTracker + 1, // increment tracker on successful pick
-    players: [...state.players, lowestPlaysPlayer],    
   }; 
 };
 
