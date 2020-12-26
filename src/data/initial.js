@@ -16,8 +16,6 @@ const initial = {
     {name: "Charlie", playCount: 4, isPicked: false, isNew: false},  
     {name: "Luke", playCount: 5, isPicked: false, isNew: false},  
   ],
-  pickedList: [],
-  pickedListTracker: 0,
 };
 
 export default initial;

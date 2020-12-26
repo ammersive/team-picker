@@ -27,7 +27,7 @@ const NewPlayers = ({ players, pickedList, bank, player }) => (
         <div className="add-players">
           <h3>Draw</h3>
           <p>Draw players due a game</p>
-          <DrawPlayer pickedList={ pickedList } bank={ bank } />
+          <DrawPlayer bank={ bank } />
           <ResetBank buttonText={ "Clear the bank" }/>
         </div>
         <div className="add-players">

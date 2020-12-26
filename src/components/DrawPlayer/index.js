@@ -5,7 +5,6 @@ import { drawPlayer } from "../../data/actions";
 const mapStateToProps = (state) => {
   return {
     bank: state.bank,
-    pickedList: state.pickedList,
   };
 };
 
