@@ -1,24 +1,27 @@
-const Bank = ({ bank }) => {
-  return (
-    <>
-      <h3>Player bank</h3> 
-      <table>
-        <thead>
-          <tr>
-              <th >Playcounts</th>
-          </tr>
-        </thead>
-        <tbody>
-          { bank.map((player, index) => (
-            <tr>            
-              <td className="player-cell" key={ index }>{ player.name} </td>
-              <td className="play-count-cell" key={ index }> {player.playCount }</td>
-            </tr> 
+import { Component } from "react";
+import BankRow from "../BankRow/";
+
+class Bank extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+      bank: props.bank
+		};
+  }
+
+  render() {
+    return (
+      <>
+        <h3>Player bank</h3> 
+        <ul>
+          { this.state.bank.map((player, index) => (    
+            <BankRow index={ index } player={ player }/>   
           )) }
-        </tbody>   
-      </table>
-    </>
-  );
-};
+        </ul>        
+      </>
+    );
+  }
+
+}
 
 export default Bank;

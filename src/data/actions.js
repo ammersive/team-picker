@@ -8,6 +8,13 @@ export const addPlayer = ({ player }) => {
   };
 };
 
+export const pickPlayer = ({ player }) => {
+  return {
+    type: "PICK_PLAYER",
+    player: player,
+  };
+};
+
 export const drawPlayer = () => {
   return {
     type: "DRAW_PLAYER"

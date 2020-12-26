@@ -63,12 +63,7 @@ const generateName = () => {
 }
 
 const addPlayer = (state, { player }) => {
-  
-  // // Attempt to solve unique players issue. Not currently working (only works for certain orders) and probably doomed. think again later!
-  // if (state.bank.some(bankPlayer => bankPlayer.name === player.name)) {
-  //   state.pickedTracker -= 1;
-  //   console.log(state.pickedTracker);  
-  // };
+  player.isPicked = true;
 
   return {
     ...state,
@@ -76,23 +71,29 @@ const addPlayer = (state, { player }) => {
   }; 
 };
 
-const drawPlayer = (state) => {
-  // sort bank of players by play count
-  let sortedBank = [...state.bank];
-  sortedBank.sort(( a, b ) => a.playCount - b.playCount);
-  
-    // // Attempt to solve unique players issue. Not currently working (only works for certain orders) and probably doomed. think again later!
-    // if (state.players.some(player => player.name === sortedBank[state.pickedTracker].name)) {
-    //   console.log(sortedBank[state.pickedTracker].name);  
-    //   state.pickedTracker += 1;
-    // };         
+const pickPlayer = (state, { player }) => {
 
-  let lowestPlaysPlayer = sortedBank[state.pickedTracker];
+  if (player.isPicked === false) {
+    player.isPicked = true;
+    state.players = [...state.players, player];
+  };  
+
+  return {
+    ...state   
+  }; 
+};
+
+const drawPlayer = (state) => {
+  let sortedBank = [...state.bank];
+  sortedBank.sort(( a, b ) => a.playCount - b.playCount);        
+
+  let lowestPlaysPlayer = sortedBank[state.pickedListTracker];
+  lowestPlaysPlayer.isPicked = true;
 
   return {
     ...state,
-    picked: [...state.picked, lowestPlaysPlayer],
-    pickedTracker: state.pickedTracker + 1, // increment tracker on successful pick
+    pickedList: [...state.pickedList, lowestPlaysPlayer],
+    pickedListTracker: state.pickedListTracker + 1, // increment tracker on successful pick
     players: [...state.players, lowestPlaysPlayer],    
   }; 
 };
@@ -163,8 +164,8 @@ const save = (state) => {
     team2: [],
     team1Name: "Team 1",
     team2Name: "Team 2",
-    picked: [],
-    pickedTracker: 0,
+    pickedList: [],
+    pickedListTracker: 0,
   }; 
 };
 
@@ -172,8 +173,8 @@ const reset = (state) => {
   return {
     ...state,
     players: [],
-    picked: [],
-    pickedTracker: 0,
+    pickedList: [],
+    pickedListTracker: 0,
   }; 
 };
 
@@ -187,6 +188,7 @@ const resetBank = (state) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PLAYER": return addPlayer(state, action);
+    case "PICK_PLAYER": return pickPlayer(state, action);
     case "DRAW_PLAYER": return drawPlayer(state);
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);

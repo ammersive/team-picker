@@ -1,10 +1,10 @@
-const DrawPlayer = ({ picked, bank, clickDraw }) => (    
+const DrawPlayer = ({ pickedList, bank, clickDraw }) => (    
   <button onClick={
-    // have to check picked.length not 0 to stop this warning firing when clearing the bank 
-    (picked.length !== 0) && (picked.length === bank.length) ? 
+    // have to check pickedList.length not 0 to stop this warning firing when clearing the bank 
+    (pickedList.length !== 0) && (pickedList.length === bank.length) ? 
     alert("That's the last player in the bank! You can add more players yourself, or create teams now") :
     clickDraw }
-    disabled={ picked.length === bank.length }
+    disabled={ pickedList.length === bank.length }
   >
     Draw
   </button>
