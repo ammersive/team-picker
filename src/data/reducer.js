@@ -105,13 +105,25 @@ const pickPlayer = (state, { player }) => {
   }; 
 };
 
+// Draw reducer ensures lowest plays players are picked first, but that those with the same number of players are picked at random to avoid bias over time.
 const drawPlayer = (state) => {
+  
   // If at least one player in the bank remains unpicked:
   if (state.bank.some(player => player.isPicked === false)) {
-    // If so, filter out selected players, order by fewest plays, and add first player to players list
-    let filteredBank = state.bank.filter( player => player.isPicked === false).sort(( a, b ) => a.playCount - b.playCount); 
-    filteredBank[0].isPicked = true;
-    state.players = [...state.players, filteredBank[0]];
+
+    // Filter players who have already been selected
+    let filteredBank = state.bank.filter( player => player.isPicked === false);
+    // Build a new randomised list from the filtered bank
+    let randomisedFilter = [];
+    for (let i = filteredBank.length; i > 0; i -= 1) {
+      let pick = filteredBank.splice(Math.floor(Math.random() * i), 1);
+      randomisedFilter.push(pick[0]);
+    };
+    // Sort highest to lowest playcounts (players with same playcounts will now not always appear at same/similar indices)
+    randomisedFilter.sort(( a, b ) => a.playCount - b.playCount); 
+    // Select the first (so, a player from the set of players with the lowest score, produced randomly), and add to players list
+    randomisedFilter[0].isPicked = true;
+    state.players = [...state.players, randomisedFilter[0]];
   };
 
   return {
