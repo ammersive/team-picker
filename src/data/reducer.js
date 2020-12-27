@@ -66,16 +66,20 @@ const addPlayer = (state, { player }) => {
 
   // trim trailing whitespace from player name
   player.name = player.name.trimLeft().trimRight();
+  console.log(state.bank);
   
   // prevent nameless players
   if (player.name === "") {
-    return alert("You cannot add a nameless player!");
+    alert("You cannot add a nameless player!");
+    return state;
   // prevent non-unique player names (case insensitive)
   } else if (state.bank.some(bankPlayer => bankPlayer.name.toLowerCase() === player.name.toLowerCase())) {
-    return alert(`A player called ${player.name} already exists in the bank. You can either add them directly from the bank with the pick button, or choose a different name`);
-  // invite user to differentiate a name that matches a picked name, in case e.g. 2 Jens are playing
+    alert(`A player called ${player.name} already exists in the bank. You can either add them directly from the bank with the pick button, or choose a different name`);
+    return state;
+    // invite user to differentiate a name that matches a picked name, in case e.g. 2 Jens are playing
   } else if (state.players.some(playersMember => playersMember.name.toLowerCase() === player.name.toLowerCase())) {
-    return alert(`A player called ${player.name} has already been picked. You can add an initial to tell them apart`);
+    alert(`A player called ${player.name} has already been picked. You can add an initial to tell them apart`);
+    return state;
   } else {
 
   player.isPicked = true;
