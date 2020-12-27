@@ -6,8 +6,10 @@ import CreateTeams from "../CreateTeams";
 import Reset from "../Reset";
 import ResetBank from "../ResetBank";
 
-const NewPlayers = ({ players, bank, player }) => (
+const NewPlayers = ({ players, bank, player, playersChosen }) => (
   
+  !playersChosen ?
+
   <section className="wrapper players-wrapper">
 
     <header className="section-header">
@@ -51,6 +53,8 @@ const NewPlayers = ({ players, bank, player }) => (
     </div>
 
   </section>
+
+  : null
 );
 
 export default NewPlayers;

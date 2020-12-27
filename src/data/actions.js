@@ -23,7 +23,7 @@ export const drawPlayer = () => {
 
 export const createTeams = () => {
   return {
-    type: "RANDOMISE_TEAMS",
+    type: "CREATE_TEAMS",
   };
 };
 

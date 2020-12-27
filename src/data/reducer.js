@@ -98,6 +98,13 @@ const drawPlayer = (state) => {
   }; 
 };
 
+const startGame = (state) => {
+  return {
+    ...state,
+    playersChosen: true,  
+  };
+}
+
 const randomiseTeams = (state) => {
   let players = [...state.players];
   let shuffledPlayers = [];
@@ -162,6 +169,7 @@ const save = (state) => {
     team2: [],
     team1Name: "Team 1",
     team2Name: "Team 2",
+    playersChosen: false,
   }; 
 };
 
@@ -186,6 +194,7 @@ const reducer = (state, action) => {
     case "ADD_PLAYER": return addPlayer(state, action);
     case "PICK_PLAYER": return pickPlayer(state, action);
     case "DRAW_PLAYER": return drawPlayer(state);
+    case "CREATE_TEAMS": return startGame(randomiseTeams(state));
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);

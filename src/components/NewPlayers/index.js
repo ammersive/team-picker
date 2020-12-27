@@ -5,6 +5,7 @@ const mapStateToProps = (state) => {
   return {
     bank: state.bank,
     players: state.players,
+    playersChosen: state.playersChosen,
   };
 };
 

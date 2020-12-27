@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
     players: state.players,
     team1Name: state.team1Name,
     team2Name: state.team2Name,
+    playersChosen: state.playersChosen,
   };
 };
 
