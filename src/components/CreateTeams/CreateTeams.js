@@ -13,7 +13,9 @@ class CreateTeams extends Component {
 
   render() {
     return(
-      <button onClick={ this.handleClick }>Create Teams</button>
+      this.props.players.length > 0 ?
+      <button onClick={ this.handleClick }>Create Teams</button> :
+      null
     );
   }
 }

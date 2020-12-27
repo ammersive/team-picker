@@ -43,8 +43,8 @@ const NewPlayers = ({ players, bank, player }) => (
         <h3>Picks</h3> 
         <ListPlayers players={ players }/>    
         <div className="create">
-          <CreateTeams />
-          <Reset buttonText={ "Clear these players" }/>
+          <CreateTeams players={ players }/>
+          <Reset players={ players } buttonText={ "Clear these players" }/>
         </div>
       </div>
 
