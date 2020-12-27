@@ -61,6 +61,7 @@ h1 {
 .team-name {
   text-align: center;
   font-family: 'Nova Flat', cursive;
+  height: 5rem;
   font-size: 2rem;
   line-height: 2.4rem;
   padding: 1.5rem 0.5rem 2rem 0.5rem;
