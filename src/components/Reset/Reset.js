@@ -1,6 +1,6 @@
 const Reset = ({ clickReset, buttonText, players }) => (
   players.length > 0 ?
-  <button className="clear-players" onClick={ clickReset }>
+  <button className="players-reset" onClick={ clickReset }>
   {buttonText}
   </button> :
   null  

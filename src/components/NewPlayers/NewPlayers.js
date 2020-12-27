@@ -4,7 +4,7 @@ import DrawPlayer from "../DrawPlayer";
 import ListPlayers from "../ListPlayers/ListPlayers";
 import CreateTeams from "../CreateTeams";
 import Reset from "../Reset";
-import ResetBank from "../ResetBank";
+// import ResetBank from "../ResetBank";
 
 const NewPlayers = ({ players, bank, player, playersChosen }) => (
   
@@ -30,7 +30,7 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
           <h3>Draw</h3>
           <p>Draw players due a game</p>
           <DrawPlayer bank={ bank } />
-          <ResetBank buttonText={ "Clear the bank" }/>          
+          {/* <ResetBank buttonText={ "Clear the bank" }/>*/}
         
         </div>
         <div className="add-players">

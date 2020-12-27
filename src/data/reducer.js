@@ -86,6 +86,8 @@ const pickPlayer = (state, { player }) => {
 
 const drawPlayer = (state) => {
   // Check that at least one unselected player remains in the bank
+  // BAD LOGIC here: 
+  // should be: a "some" : e.g. if any player in bank is unPicked
   if (state.bank.length > state.players.length) {
     // If so, filter out selected players, order by fewest plays, and add first player to players list
     let filteredBank = state.bank.filter( player => player.isPicked === false).sort(( a, b ) => a.playCount - b.playCount); 
@@ -159,7 +161,8 @@ const save = (state) => {
   // Increment the playCount of each player and reset isPicked to false
   state.players.forEach(player => incrementPlayCount(resetIsPicked(player)));
   // Push new players to the bank, reseting their isNew property to false
-  state.players.forEach(player => player.isNew ? state.bank = [...state.bank, updateIsNew(player)] : null );
+  // state.players.forEach(player => player.isNew ? state.bank = [...state.bank, updateIsNew(player)] : null );
+  state.players.forEach(player => player.isNew ? state.bank = [updateIsNew(player), ...state.bank] : null );
 
   return {
     ...state,

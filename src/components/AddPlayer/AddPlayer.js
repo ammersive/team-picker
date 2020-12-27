@@ -35,7 +35,7 @@ class AddPlayer extends Component {
 		return (
 			<form onSubmit={ this.handleSubmit } >
 				<input onChange={ this.handleChange } value={ this.state.player.name } />
-				<button className="add-buttons">Add</button>
+				<button className="add-button">Add</button>
 			</form>
 		);
 	}

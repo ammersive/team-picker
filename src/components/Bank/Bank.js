@@ -1,21 +1,28 @@
 import BankAddButton from "../BankAddButton/";
+import ResetBank from "../ResetBank/";
 
 const Bank = ({ bank }) => {
-  console.log(bank);
+  
   return (
+    
     <>
       <h3>Player bank</h3> 
-      <h4>Number of previous plays</h4> 
-      <ul>
-        { bank.map((player, index) => (
-          <li>
-            <div className="player-cell">{ player.name }</div>  
-            <div className="play-count-cell">{ player.playCount }</div> 
-            <div className="bank-add-wrap"><BankAddButton index={ index } player={ player }/></div>
-          </li>   
-        )) }
-      </ul>        
-    </>
+      {bank.length > 0 ? 
+      <> 
+        <h4>Number of previous plays</h4> 
+        <ul>
+          { bank.map((player, index) => (
+            <li>
+              <div className="player-cell">{ player.name }</div>  
+              <div className="play-count-cell">{ player.playCount }</div> 
+              <div className="bank-add-wrap"><BankAddButton index={ index } player={ player }/></div>
+            </li>   
+          )) }
+        </ul>
+        <ResetBank buttonText={ "Clear the bank" }/>
+      </>
+      : <p className="no-players">Bank is empty</p> }      
+    </>    
   );
 };
 

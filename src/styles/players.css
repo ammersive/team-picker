@@ -59,7 +59,7 @@
   width: 4rem;
 }
 
-.bank button {
+.bank ul button {
   display: block;
   background-color: beige;
   margin: 0.3rem;
@@ -67,6 +67,22 @@
   font-size: 0.8rem;
   padding: 0.3rem;
   border-radius: 8px;   
+}
+
+button.bank-clear {  
+  background-color: tomato;
+  margin-top: 0.8rem;
+  border: 0px;
+  font-size: 0.75rem;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 8px; 
+}
+
+.no-players {
+  font-style: italic;
+  margin: 1rem;
+  color: beige;
 }
 
 /* WRAPPER 2 */
@@ -94,24 +110,14 @@
   margin-bottom: 1rem;
 }
 
-.add-players button {
+button.draw-players, button.add-button {
   display: block;
+  background-color: beige;
   margin: 0.8rem auto 0rem auto;
   border: 0px;
   font-size: 0.8rem;
   padding: 0.4rem;
   border-radius: 8px;      
-}
-
-.add-buttons {
-  background-color: beige;
-}
-
-.clear-bank-button {
-  background-color: rgb(232, 125, 106);
-  /* the below are not being applied... */
-  padding: 0.2; 
-  font-size: 0.6rem;
 }
 
 /* WRAPPER 3 */
@@ -136,7 +142,7 @@
   border-radius: 8px;
 }
 
-.create button{
+button.create-button {
   display: block;
   margin: 0.8rem auto;
   border: 0px;
@@ -146,3 +152,11 @@
   background-color: beige; 
 }
 
+button.players-reset {  
+  background-color: tomato;
+  border: 0px;
+  font-size: 0.75rem;
+  padding: 0.3rem;
+  border-radius: 8px;
+  margin-bottom: 1rem; 
+}

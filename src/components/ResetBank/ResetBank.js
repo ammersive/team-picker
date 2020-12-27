@@ -1,6 +1,6 @@
-const ResetBank = ({ clickReset, buttonText, bank }) => (
+const ResetBank = ({ clickReset, buttonText }) => (
   // <button onClick={ clickReset } disabled={ bank === [] }>
-  <button className="clear-bank-button" onClick={ clickReset }>
+  <button className="bank-clear" onClick={ clickReset }>
     {buttonText}
   </button>
 );
