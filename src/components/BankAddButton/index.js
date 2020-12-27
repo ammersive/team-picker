@@ -1,4 +1,4 @@
-import BankRow from "./BankRow";
+import BankAddButton from "./BankAddButton";
 import { connect } from "react-redux";
 import { pickPlayer } from "../../data/actions";
 
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BankRow);
+export default connect(mapStateToProps, mapDispatchToProps)(BankAddButton);

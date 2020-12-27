@@ -149,7 +149,7 @@ const updateIsNew = (player) => {
 }
 
 const save = (state) => {
-  // Increment the playCount of each player and reset isPickec to false
+  // Increment the playCount of each player and reset isPicked to false
   state.players.forEach(player => incrementPlayCount(resetIsPicked(player)));
   // Push new players to the bank, reseting their isNew property to false
   state.players.forEach(player => player.isNew ? state.bank = [...state.bank, updateIsNew(player)] : null );
@@ -165,6 +165,8 @@ const save = (state) => {
   }; 
 };
 
+// ************
+// Also needs to loop through players and reset isPicked
 const reset = (state) => {
   return {
     ...state,

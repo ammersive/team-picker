@@ -1,5 +1,5 @@
 import { Component } from "react";
-class BankRow extends Component {
+class BankAddButton extends Component {
 
   constructor(props) {
     super(props);
@@ -8,8 +8,6 @@ class BankRow extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
-
 
   handleClick(event) {
     event.preventDefault();
@@ -28,4 +26,4 @@ class BankRow extends Component {
   }
 }
 
-export default BankRow;
+export default BankAddButton;

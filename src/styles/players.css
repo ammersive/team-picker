@@ -16,46 +16,53 @@
 
 .bank-wrapper {
   min-width: 15rem;
-  border: solid 3px green;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
 
 .bank {  
-  background:rgba(128, 255, 0, 0.454);
+  background: rgb(6, 48, 6);
+  border: solid 10px rgb(6, 48, 6);
   border-radius: 20px;  
   margin: 0rem auto;
   padding-bottom: 0.5rem;
   text-align: center;   
 }
 
-.bank table {
+/* .bank table {
   margin: 1.5rem auto;
   width: 80%;
-}
+} */
 
-.bank tbody {
+.bank ul {
   display: block;
   overflow: auto;
   height: 14rem;
 }
 
-.bank tr:nth-child(odd) {
+.bank li:nth-child(odd) {
   background:rgb(67, 210, 129);
 }
-.bank tr:nth-child(even) {
+.bank li:nth-child(even) {
   background:seagreen;
 }
 
 .bank .player-cell {
+  display: inline-block;
   text-align: right;
   width: 8rem;
 }
 
 .bank .play-count-cell {
-  width: 4rem;
+  display: inline-block;
+  width: 2rem;
   text-align: left;
   padding: 0.3rem 0rem 0.3rem 0.5rem;
+}
+
+.bank .bank-add-wrap {
+  display: inline-block;
+  width: 4rem;
 }
 
 /* WRAPPER 2 */
