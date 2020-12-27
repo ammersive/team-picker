@@ -165,9 +165,9 @@ const save = (state) => {
   }; 
 };
 
-// ************
-// Also needs to loop through players and reset isPicked
 const reset = (state) => {
+  state.bank.forEach(player => resetIsPicked(player));
+
   return {
     ...state,
     players: [],
