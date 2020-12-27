@@ -34,7 +34,7 @@ const NewPlayers = ({ players, bank, player }) => (
         <div className="add-players">
           <h3>Add new</h3>
           <p>Add new player</p>
-          <AddPlayer />
+          <AddPlayer bank={ bank } players={ players }/>
         </div>
       </div>      
 
