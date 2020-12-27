@@ -59,6 +59,16 @@
   width: 4rem;
 }
 
+.bank button {
+  display: block;
+  background-color: beige;
+  margin: 0.3rem;
+  border: 0px;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 8px;   
+}
+
 /* WRAPPER 2 */
 
 .draw-add-wrapper {
@@ -90,10 +100,14 @@
   border: 0px;
   font-size: 0.8rem;
   padding: 0.4rem;
-  border-radius: 8px;    
+  border-radius: 8px;      
 }
 
-.clear-bank {
+.add-buttons {
+  background-color: beige;
+}
+
+.clear-bank-button {
   background-color: rgb(232, 125, 106);
 }
 
@@ -113,7 +127,7 @@
 
 .player-list-item {
   background-color: rgb(6, 48, 6);
-  color: rgb(232, 214, 207);
+  color: beige;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 8px;
@@ -125,5 +139,6 @@
   border: 0px;
   font-size: 0.8rem;
   padding: 0.5rem;
-  border-radius: 8px; 
+  border-radius: 8px;
+  background-color: beige; 
 }

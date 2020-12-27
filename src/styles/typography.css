@@ -7,7 +7,7 @@ h1 {
   text-align: center;
   font-family: 'Nova Flat', cursive;
   font-size: 5rem;
-  color: rgb(232, 214, 207);
+  color: beige;
   padding: 2.5rem 0.5rem;  
 }
 
@@ -26,25 +26,25 @@ h1 {
   padding: 1rem;
   /* padding: 1.5rem 0.5rem 2rem 0.5rem; */
   background: rgb(6, 48, 6);
-  color: cornsilk;
+  color: beige;
   border-radius: 20px 20px 0px 0px;
 }
 
 .bank h4 {
-  background-color: rgb(232, 214, 207);
+  background-color: beige;
   padding: 0.5rem;
 }
 
 .add-players h3 {
   font-family: 'Nova Flat', cursive;
   font-size: 1.4rem;
-  color: rgb(240, 223, 223);
+  color: beige;
   padding-bottom: 1rem;
 }
 
 .add-players p {
   font-size: 0.9rem;
-  color: rgb(240, 223, 223);
+  color: beige;
   padding-bottom: 0.5rem;
 }
 
@@ -65,6 +65,6 @@ h1 {
   line-height: 2.4rem;
   padding: 1.5rem 0.5rem 2rem 0.5rem;
   background: rgb(6, 48, 6);
-  color: cornsilk;
+  color: beige;
   border-radius: 20px 20px 0px 0px;
 }
