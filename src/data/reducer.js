@@ -85,10 +85,7 @@ const pickPlayer = (state, { player }) => {
 };
 
 const drawPlayer = (state) => {
-  // Check that at least one unselected player remains in the bank
-  // BAD LOGIC here: 
-  // should be: a "some" : e.g. if any player in bank is unPicked
-  if (state.bank.length > state.players.length) {
+  if (state.bank.some(player => player.isPicked === false)) {
     // If so, filter out selected players, order by fewest plays, and add first player to players list
     let filteredBank = state.bank.filter( player => player.isPicked === false).sort(( a, b ) => a.playCount - b.playCount); 
     filteredBank[0].isPicked = true;
