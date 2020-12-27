@@ -109,6 +109,9 @@
 
 .clear-bank-button {
   background-color: rgb(232, 125, 106);
+  /* the below are not being applied... */
+  padding: 0.2; 
+  font-size: 0.6rem;
 }
 
 /* WRAPPER 3 */
@@ -142,3 +145,4 @@
   border-radius: 8px;
   background-color: beige; 
 }
+
