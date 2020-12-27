@@ -169,8 +169,6 @@ const reset = (state) => {
   return {
     ...state,
     players: [],
-    pickedList: [],
-    pickedListTracker: 0,
   }; 
 };
 

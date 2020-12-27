@@ -6,7 +6,7 @@ import CreateTeams from "../CreateTeams";
 import Reset from "../Reset";
 import ResetBank from "../ResetBank";
 
-const NewPlayers = ({ players, pickedList, bank, player }) => (
+const NewPlayers = ({ players, bank, player }) => (
   
   <section className="wrapper players-wrapper">
 
@@ -28,7 +28,8 @@ const NewPlayers = ({ players, pickedList, bank, player }) => (
           <h3>Draw</h3>
           <p>Draw players due a game</p>
           <DrawPlayer bank={ bank } />
-          <ResetBank buttonText={ "Clear the bank" }/>
+          <ResetBank buttonText={ "Clear the bank" }/>          
+        
         </div>
         <div className="add-players">
           <h3>Add new</h3>
