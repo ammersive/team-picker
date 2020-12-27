@@ -41,6 +41,8 @@
   background:rgba(124, 171, 32, 0.85);
 }
 
+
+
 .bank .player-cell {
   display: inline-block;
   text-align: right;
@@ -160,4 +162,10 @@ button.players-reset {
   padding: 0.3rem;
   border-radius: 8px;
   margin-bottom: 1rem; 
+}
+
+
+.bank li.picked {
+  /* background: rgb(131, 145, 130); */
+  filter: grayscale(75%);
 }

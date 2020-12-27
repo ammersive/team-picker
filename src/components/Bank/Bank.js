@@ -11,7 +11,7 @@ const Bank = ({ bank }) => {
         <h4>Number of previous plays</h4> 
         <ul>
           { bank.map((player, index) => (
-            <li>
+            <li className={ player.isPicked === true ? "picked" : null }>
               <div className="player-cell">{ player.name }</div>  
               <div className="play-count-cell">{ player.playCount }</div> 
               <div className="bank-add-wrap"><BankAddButton index={ index } player={ player }/></div>
