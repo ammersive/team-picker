@@ -85,6 +85,7 @@ const pickPlayer = (state, { player }) => {
 };
 
 const drawPlayer = (state) => {
+  // If at least one player in the bank remains unpicked:
   if (state.bank.some(player => player.isPicked === false)) {
     // If so, filter out selected players, order by fewest plays, and add first player to players list
     let filteredBank = state.bank.filter( player => player.isPicked === false).sort(( a, b ) => a.playCount - b.playCount); 
@@ -109,7 +110,7 @@ const randomiseTeams = (state) => {
   let shuffledPlayers = [];
 
   // For genuine (pseudo!)randomness, players are **pulled** at random from players list, and then pushed to front of new list.
-  // This avoids biasing effects: should players be pushed at random into an empty list, those players pushed first will cluster together, before the list grows.
+  // This avoids biasing effects: should players be pushed at random into an empty list, those players pushed first will cluster together before the list grows.
   // This matters because the player bank always adds players in a predictable order (according to their play-counts) 
   for (let i = players.length; i > 0; i -= 1) {
     let pick = players.splice(Math.floor(Math.random() * i), 1);

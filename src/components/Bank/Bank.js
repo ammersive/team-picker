@@ -3,9 +3,8 @@ import ResetBank from "../ResetBank/";
 
 const Bank = ({ bank }) => {
   
-  return (
-    
-    <>
+  return (    
+    <div className="bank">
       <h3>Player bank</h3> 
       {bank.length > 0 ? 
       <> 
@@ -22,7 +21,7 @@ const Bank = ({ bank }) => {
         <ResetBank buttonText={ "Clear the bank" }/>
       </>
       : <p className="no-players">Bank is empty</p> }      
-    </>    
+    </div>    
   );
 };
 

@@ -16,7 +16,7 @@ class BankAddButton extends Component {
 
   render() {
     return(
-      <button onClick={ this.handleClick }>Add</button>
+      <button onClick={ this.handleClick }>Pick</button>
     );
   }
 }

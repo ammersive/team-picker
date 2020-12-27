@@ -100,7 +100,8 @@ button.bank-clear {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 10rem;
+  /* max-width: 10rem; */
+  width: 100%;
   background-color: rgb(6, 48, 6);
   padding: 1rem;
   border-radius: 8px;

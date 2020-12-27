@@ -18,10 +18,8 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
 
     <div className="players-content-wrapper">
     
-      <div className="bank-wrapper">
-        <div className="bank">
-          <Bank bank={ bank } player={ player }/>
-        </div>
+      <div className="bank-wrapper">        
+          <Bank bank={ bank } player={ player }/>        
       </div>
 
 
