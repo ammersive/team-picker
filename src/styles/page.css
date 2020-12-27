@@ -1,21 +1,18 @@
-body {
-  background-color: rgba(127, 255, 212, 0.372);
+html { 
+  background: url("../assets/autumn-ball.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header {
-  background: rgb(6, 48, 6);;
+  background: rgb(6, 48, 6);
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1040px;
+  background-color: rgba(187, 79, 21, 0.577);
   border: solid 3px red;
-}
-
-/* .wrapper * > {
-  margin: 0 auto;
-} */
-
-.section-header {
-
 }

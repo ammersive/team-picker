@@ -13,7 +13,7 @@ h1 {
 
 .section-header {
   text-align: center;
-  background-color: rgb(232, 214, 207);
+  background:rgba(125, 171, 32, 0.85);
   font-size: 3rem;
   padding: 2rem 0.5rem;
 }

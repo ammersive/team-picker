@@ -15,13 +15,8 @@ class BankAddButton extends Component {
   }
 
   render() {
-    console.log(this.props.player.name, this.props.player.playCount, this.props.index.toString());
     return(
-      // <li className="player-cell" key={ this.props.index.toString() } > 
-      // {/* { this.props.player.name } 
-      // { this.props.player.playCount } */}
       <button onClick={ this.handleClick }>Add</button>
-    // </li>
     );
   }
 }

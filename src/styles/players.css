@@ -9,7 +9,6 @@
   align-items:flex-start;
   padding-top: 1rem;
   width: 100%;
-  border: solid 3px blue;
 }
 
 /* WRAPPER 1 */
@@ -29,11 +28,6 @@
   text-align: center;   
 }
 
-/* .bank table {
-  margin: 1.5rem auto;
-  width: 80%;
-} */
-
 .bank ul {
   display: block;
   overflow: auto;
@@ -41,10 +35,10 @@
 }
 
 .bank li:nth-child(odd) {
-  background:rgb(67, 210, 129);
+  background:rgba(162, 210, 67, 0.85);
 }
 .bank li:nth-child(even) {
-  background:seagreen;
+  background:rgba(124, 171, 32, 0.85);
 }
 
 .bank .player-cell {
@@ -70,10 +64,8 @@
 .draw-add-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  
+  justify-content: center;  
   width: 12rem;
-  border: solid 3px green;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
@@ -108,8 +100,7 @@
 /* WRAPPER 3 */
 .players-list-wrapper{
   width: 18rem;
-  border: solid 3px green;
-  background:rgba(128, 255, 0, 0.454);
+  background:rgba(125, 171, 32, 0.85);
   border-radius: 20px;
   margin-bottom: 1rem;
 }
