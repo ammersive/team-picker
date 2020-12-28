@@ -1,6 +1,6 @@
-const ClearPickedPlayers = ({ clickReset, buttonText, players }) => (
+const ClearPickedPlayers = ({ clickClearPickedPlayers, buttonText, players }) => (
   players.length > 0 ?
-  <button className="clear-picked-players" onClick={ clickReset }>
+  <button className="clear-picked-players" onClick={ clickClearPickedPlayers }>
   {buttonText}
   </button> :
   null  

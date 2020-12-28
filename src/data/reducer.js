@@ -50,49 +50,6 @@ const nouns = [
   "Wolves"
 ];
 
-const generateName = () => {
-  let adjective = adjectives[(Math.floor(Math.random() * adjectives.length))];  
-  let everyday = everydayWords[(Math.floor(Math.random() * everydayWords.length))]; 
-  let noun = nouns[(Math.floor(Math.random() * nouns.length))]; 
-  
-  let teamName = `${adjective} ${everyday} ${noun}`;
-
-  return {
-    teamName,
-  }
-}
-
-const addPlayer = (state, { player }) => {
-
-  // trim trailing whitespace from player name
-  player.name = player.name.trimLeft().trimRight();
-  console.log(state.bank);
-  
-  // prevent nameless players
-  if (player.name === "") {
-    alert("You cannot add a nameless player!");
-    return state;
-  // prevent non-unique player names (case insensitive)
-  } else if (state.bank.some(bankPlayer => bankPlayer.name.toLowerCase() === player.name.toLowerCase())) {
-    alert(`A player called ${player.name} already exists in the bank. You can either add them directly from the bank with the pick button, or choose a different name`);
-    return state;
-    // invite user to differentiate a name that matches a picked name, in case e.g. 2 Jens are playing
-  } else if (state.players.some(playersMember => playersMember.name.toLowerCase() === player.name.toLowerCase())) {
-    alert(`A player called ${player.name} has already been picked. You can add an initial to tell them apart`);
-    return state;
-  } else {
-
-  player.isPicked = true;
-  player.isNew = true;
-
-  };
-
-  return {
-    ...state,
-    players: [...state.players, player],    
-  }; 
-};
-
 const pickPlayer = (state, { player }) => {
 
   if (player.isPicked === false) {
@@ -131,12 +88,52 @@ const drawPlayer = (state) => {
   }; 
 };
 
+const addPlayer = (state, { player }) => {
+
+  // trim trailing whitespace from player name
+  player.name = player.name.trimLeft().trimRight();
+  console.log(state.bank);
+  
+  // prevent nameless players
+  if (player.name === "") {
+    alert("You cannot add a nameless player!");
+    return state;
+  // prevent non-unique player names (case insensitive)
+  } else if (state.bank.some(bankPlayer => bankPlayer.name.toLowerCase() === player.name.toLowerCase())) {
+    alert(`A player called ${player.name} already exists in the bank. You can either add them directly from the bank with the pick button, or choose a different name`);
+    return state;
+    // invite user to differentiate a name that matches a picked name, in case e.g. 2 Jens are playing
+  } else if (state.players.some(playersMember => playersMember.name.toLowerCase() === player.name.toLowerCase())) {
+    alert(`A player called ${player.name} has already been picked. You can add an initial to tell them apart`);
+    return state;
+  } else {
+
+  player.isPicked = true;
+  player.isNew = true;
+
+  };
+
+  return {
+    ...state,
+    players: [...state.players, player],    
+  }; 
+};
+
 const startGame = (state) => {
   return {
     ...state,
     playersChosen: true,  
   };
 }
+
+const clearPickedPlayers = (state) => {
+  state.bank.forEach(player => resetIsPicked(player));
+
+  return {
+    ...state,
+    players: [],
+  }; 
+};
 
 const randomiseTeams = (state) => {
   let players = [...state.players];
@@ -156,6 +153,18 @@ const randomiseTeams = (state) => {
     team2: shuffledPlayers.slice(shuffledPlayers.length / 2),    
   };
 };
+
+const generateName = () => {
+  let adjective = adjectives[(Math.floor(Math.random() * adjectives.length))];  
+  let everyday = everydayWords[(Math.floor(Math.random() * everydayWords.length))]; 
+  let noun = nouns[(Math.floor(Math.random() * nouns.length))]; 
+  
+  let teamName = `${adjective} ${everyday} ${noun}`;
+
+  return {
+    teamName,
+  }
+}
 
 const generateName1 = (state) => {
   let name = generateName().teamName;
@@ -207,16 +216,7 @@ const save = (state) => {
   }; 
 };
 
-const reset = (state) => {
-  state.bank.forEach(player => resetIsPicked(player));
-
-  return {
-    ...state,
-    players: [],
-  }; 
-};
-
-const resetBank = (state) => {
+const clearBank = (state) => {
   window.confirm("Do you want to wipe the bank? This will delete all player information.") ? state.bank = [] : state.bank = [...state.bank];
   return {
     ...state,  
@@ -225,16 +225,16 @@ const resetBank = (state) => {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADD_PLAYER": return addPlayer(state, action);
+    case "CLEAR_BANK": return clearBank(state);;
     case "PICK_PLAYER": return pickPlayer(state, action);
     case "DRAW_PLAYER": return drawPlayer(state);
+    case "ADD_PLAYER": return addPlayer(state, action);
     case "CREATE_TEAMS": return startGame(randomiseTeams(state));
+    case "CLEAR_CLICKED_PLAYERS": return clearPickedPlayers(state);;
     case "RANDOMISE_TEAMS": return randomiseTeams(state);
     case "GENERATE_NAME1": return generateName1(state);
     case "GENERATE_NAME2": return generateName2(state);
     case "SAVE": return save(state);
-    case "RESET": return reset(state);;
-    case "RESET_BANK": return resetBank(state);;
     default: return state;
   }
 };

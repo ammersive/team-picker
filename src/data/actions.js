@@ -1,6 +1,12 @@
 // Action creators:
 // Functions which return an action when called (from a component wrapper)
 
+export const clearBank = () => {  
+  return { 
+    type: "CLEAR_BANK",
+  };
+};
+
 export const addPlayer = ({ player }) => {
   return {
     type: "ADD_PLAYER",
@@ -27,9 +33,9 @@ export const createTeams = () => {
   };
 };
 
-export const shuffleTeams = () => {
+export const clearPickedPlayers = () => {
   return {
-    type: "RANDOMISE_TEAMS",
+    type: "CLEAR_CLICKED_PLAYERS",
   };
 };
 
@@ -45,20 +51,14 @@ export const generateName2 = () => {
   };
 };
 
+export const shuffleTeams = () => {
+  return {
+    type: "RANDOMISE_TEAMS",
+  };
+};
+
 export const save = () => {
   return {
     type: "SAVE",
-  };
-};
-
-export const reset = () => {
-  return {
-    type: "RESET",
-  };
-};
-
-export const resetBank = () => {  
-  return { 
-    type: "RESET_BANK",
   };
 };

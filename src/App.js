@@ -1,12 +1,12 @@
 import Header from "./components/Header";
 import NewPlayers from "./components/NewPlayers";
-import Game from "./components/Game";
+import Teams from "./components/Teams";
 
 const App = () => (
   <>
     <Header>Heading</Header>
     <NewPlayers />
-    <Game />
+    <Teams />
   </>
 );
 

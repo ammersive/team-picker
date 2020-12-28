@@ -1,5 +1,5 @@
 import BankAddButton from "../BankAddButton/";
-import ResetBank from "../ResetBank/";
+import ClearBankButton from "../ClearBankButton/";
 
 const Bank = ({ bank }) => {
   
@@ -12,13 +12,19 @@ const Bank = ({ bank }) => {
         <ul>
           { bank.map((player, index) => (
             <li className={ player.isPicked === true ? "picked" : null }>
-              <div className="player-cell">{ player.name }</div>  
-              <div className="play-count-cell">{ player.playCount }</div> 
-              <div className="bank-add-wrap"><BankAddButton index={ index } player={ player }/></div>
+              <div className="player-cell">
+                { player.name }
+              </div>  
+              <div className="play-count-cell">
+                { player.playCount }
+              </div> 
+              <div className="bank-add-wrap">
+                <BankAddButton index={ index } player={ player }/>
+              </div>
             </li>   
           )) }
         </ul>
-        <ResetBank buttonText={ "Clear the bank" }/>
+        <ClearBankButton buttonText={ "Clear the bank" }/>
       </>
       : <p className="no-players">Bank is empty</p> }      
     </div>    
