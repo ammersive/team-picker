@@ -10,7 +10,7 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
   
   !playersChosen ?
 
-  <section className="wrapper players-wrapper">
+  <section className="section-wrapper players-wrapper">
 
     <header className="section-header">
       <h2>Select Players</h2>

@@ -6,7 +6,7 @@ import Save from "../Save/";
 
 const Game = ({ playersChosen }) => (
   playersChosen ?
-  <section className="wrapper game-wrapper">
+  <section className="section-wrapper game-wrapper">
     <header className="section-header">
       <h2>Teams</h2>
     </header>
