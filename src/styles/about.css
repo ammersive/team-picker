@@ -1,0 +1,25 @@
+.overview-wrapper {
+  display: flex;
+  margin: 2rem 2.3rem 0rem 2.3rem;
+} 
+
+.about-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+
+.about-box {
+  width: 20rem;
+  background-color: rgb(6, 48, 6);
+  padding: 1rem;
+  margin: 1rem; 
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}  
+
+.overview {
+  margin: 0rem auto 0rem auto;
+  width: 100%;
+}
