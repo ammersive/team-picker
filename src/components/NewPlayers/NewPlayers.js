@@ -3,7 +3,7 @@ import AddPlayer from "../AddPlayer";
 import DrawPlayer from "../DrawPlayer";
 import ListPickedPlayers from "../ListPickedPlayers/ListPickedPlayers";
 import CreateTeams from "../CreateTeams";
-import Reset from "../Reset";
+import ClearPickedPlayers from "../ClearPickedPlayers";
 // import ResetBank from "../ResetBank";
 
 const NewPlayers = ({ players, bank, player, playersChosen }) => (
@@ -34,7 +34,7 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
         <ListPickedPlayers players={ players }/>    
         <div className="create">
           <CreateTeams players={ players }/>
-          <Reset players={ players } buttonText={ "Clear these players" }/>
+          <ClearPickedPlayers players={ players } buttonText={ "Clear these players" }/>
         </div>
       </div>
 

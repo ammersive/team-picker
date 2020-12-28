@@ -155,7 +155,7 @@ button.create-button {
   background-color: beige; 
 }
 
-button.players-reset {  
+button.clear-picked-players {  
   background-color: tomato;
   border: 0px;
   font-size: 0.75rem;
