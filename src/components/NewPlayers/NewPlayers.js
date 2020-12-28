@@ -2,9 +2,6 @@ import Bank from "../Bank";
 import AddPlayer from "../AddPlayer";
 import DrawPlayer from "../DrawPlayer";
 import Picks from "../Picks/";
-// import ListPickedPlayers from "../ListPickedPlayers/ListPickedPlayers";
-// import CreateTeams from "../CreateTeams";
-// import ClearPickedPlayers from "../ClearPickedPlayers";
 
 const NewPlayers = ({ players, bank, player, playersChosen }) => (
   
@@ -24,13 +21,7 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
       </div> 
       <div className="picks-wrapper">
         <Picks />
-      </div>  
-      {/* <div className="picks-wrapper">
-        <h3>Picks</h3> 
-        <ListPickedPlayers players={ players }/> 
-        <CreateTeams players={ players }/>
-        <ClearPickedPlayers players={ players } buttonText={ "Clear these players" }/>
-      </div> */}
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,69 @@
+.bank {  
+  background: rgb(6, 48, 6);
+  border: solid 10px rgb(6, 48, 6);
+  border-radius: 20px;  
+  margin: 0rem auto;
+  padding-bottom: 0.5rem;
+  text-align: center; 
+}
+
+.bank ul {
+  display: block;
+  overflow: auto;
+  height: 14rem;
+}
+
+.bank li:nth-child(odd) {
+  background:rgba(162, 210, 67, 0.85);
+}
+.bank li:nth-child(even) {
+  background:rgba(124, 171, 32, 0.85);
+}
+
+.bank .player-cell {
+  display: inline-block;
+  text-align: right;
+  width: 8rem;
+}
+
+.bank .play-count-cell {
+  display: inline-block;
+  width: 2rem;
+  text-align: left;
+  padding: 0.3rem 0rem 0.3rem 0.5rem;
+}
+
+.bank .bank-add-wrap {
+  display: inline-block;
+  width: 4rem;
+}
+
+.bank ul button {
+  display: block;
+  background-color: beige;
+  margin: 0.3rem;
+  border: 0px;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 8px;   
+}
+
+button.bank-clear {  
+  background-color: tomato;
+  margin-top: 0.8rem;
+  border: 0px;
+  font-size: 0.75rem;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 8px; 
+}
+
+.no-players {
+  font-style: italic;
+  margin: 1rem;
+  color: beige;
+}
+
+.bank li.picked {
+  filter: grayscale(75%);
+}

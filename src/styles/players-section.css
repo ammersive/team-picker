@@ -1,0 +1,30 @@
+.players-wrapper{
+  text-align: center;
+}
+
+.players-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items:flex-start;
+  padding-top: 1rem;
+  width: 100%;  
+}
+
+.bank-wrapper {
+  min-width: 15rem;
+  margin-bottom: 1rem;
+}
+
+.draw-add-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  width: 12rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.picks-wrapper {  
+  margin-bottom: 1rem;
+}
