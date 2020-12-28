@@ -8,7 +8,8 @@ h1 {
   font-family: 'Nova Flat', cursive;
   font-size: 5rem;
   color: beige;
-  padding: 2.5rem 0.5rem;  
+  padding: 2.5rem 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .section-header {
@@ -16,6 +17,7 @@ h1 {
   background:rgba(125, 171, 32, 0.85);
   font-size: 3rem;
   padding: 2rem 0.5rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); 
 }
 
 .bank h3 {
@@ -28,11 +30,13 @@ h1 {
   background: rgb(6, 48, 6);
   color: beige;
   border-radius: 20px 20px 0px 0px;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); 
 }
 
 .bank h4 {
   background-color: beige;
   padding: 0.5rem;
+  text-shadow: 0.25px 0.25px 0.5px rgba(0, 0, 0, 0.5); 
 }
 
 .draw-add-players h3 {
@@ -40,6 +44,7 @@ h1 {
   font-size: 1.4rem;
   color: beige;
   padding-bottom: 1rem;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .draw-add-players p {
@@ -52,6 +57,7 @@ h1 {
   font-family: 'Nova Flat', cursive;
   font-size: 2rem;
   padding: 1rem;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); 
 }
 
 .message {
@@ -61,6 +67,7 @@ h1 {
 .team-name {
   text-align: center;
   font-family: 'Nova Flat', cursive;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); 
   height: 5rem;
   font-size: 2rem;
   line-height: 2.4rem;
