@@ -8,14 +8,13 @@
   justify-content: space-evenly;
   align-items:flex-start;
   padding-top: 1rem;
-  width: 100%;
+  width: 100%;  
 }
 
-/* WRAPPER 1 */
+/* BANK */
 
 .bank-wrapper {
   min-width: 15rem;
-  border-radius: 20px;
   margin-bottom: 1rem;
 }
 
@@ -25,7 +24,7 @@
   border-radius: 20px;  
   margin: 0rem auto;
   padding-bottom: 0.5rem;
-  text-align: center;   
+  text-align: center; 
 }
 
 .bank ul {
@@ -40,8 +39,6 @@
 .bank li:nth-child(even) {
   background:rgba(124, 171, 32, 0.85);
 }
-
-
 
 .bank .player-cell {
   display: inline-block;
@@ -87,7 +84,7 @@ button.bank-clear {
   color: beige;
 }
 
-/* WRAPPER 2 */
+/* DRAW / ADD PLAYERS */
 
 .draw-add-wrapper {
   display: flex;
@@ -102,7 +99,6 @@ button.bank-clear {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* max-width: 10rem; */
   width: 100%;
   background-color: rgb(6, 48, 6);
   padding: 1rem;
@@ -123,12 +119,16 @@ button.bank-clear {
   border-radius: 8px;      
 }
 
-/* WRAPPER 3 */
-.players-list-wrapper{
+/* PICKS */
+.picks-wrapper {  
+  margin-bottom: 1rem;
+}
+
+.picks {
   width: 18rem;
   background:rgba(125, 171, 32, 0.85);
   border-radius: 20px;
-  margin-bottom: 1rem;
+  padding-bottom: 0.1rem;
 }
 
 .players-list {
@@ -164,8 +164,6 @@ button.clear-picked-players {
   margin-bottom: 1rem; 
 }
 
-
 .bank li.picked {
-  /* background: rgb(131, 145, 130); */
   filter: grayscale(75%);
 }
