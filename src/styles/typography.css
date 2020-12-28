@@ -35,14 +35,14 @@ h1 {
   padding: 0.5rem;
 }
 
-.add-players h3 {
+.draw-add-players h3 {
   font-family: 'Nova Flat', cursive;
   font-size: 1.4rem;
   color: beige;
   padding-bottom: 1rem;
 }
 
-.add-players p {
+.draw-add-players p {
   font-size: 0.9rem;
   color: beige;
   padding-bottom: 0.5rem;

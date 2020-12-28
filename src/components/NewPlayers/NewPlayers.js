@@ -1,7 +1,7 @@
 import Bank from "../Bank";
 import AddPlayer from "../AddPlayer";
 import DrawPlayer from "../DrawPlayer";
-import ListPlayers from "../ListPlayers/ListPlayers";
+import ListPickedPlayers from "../ListPickedPlayers/ListPickedPlayers";
 import CreateTeams from "../CreateTeams";
 import Reset from "../Reset";
 // import ResetBank from "../ResetBank";
@@ -23,25 +23,15 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
       </div>
 
 
-      <div className="draw-add-wrapper">          
-        <div className="add-players">
-          <h3>Draw</h3>
-          <p>Draw players due a game</p>
-          <DrawPlayer bank={ bank } />
-          {/* <ResetBank buttonText={ "Clear the bank" }/>*/}
-        
-        </div>
-        <div className="add-players">
-          <h3>Add new</h3>
-          <p>Add new player</p>
+      <div className="draw-add-wrapper"> 
+          <DrawPlayer bank={ bank } /> 
           <AddPlayer bank={ bank } players={ players }/>
-        </div>
       </div>      
 
       <div className="players-list-wrapper">
       {/* put inside list when classname */}
         <h3>Picks</h3> 
-        <ListPlayers players={ players }/>    
+        <ListPickedPlayers players={ players }/>    
         <div className="create">
           <CreateTeams players={ players }/>
           <Reset players={ players } buttonText={ "Clear these players" }/>

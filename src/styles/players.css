@@ -98,7 +98,7 @@ button.bank-clear {
   margin-bottom: 1rem;
 }
 
-.add-players {
+.draw-add-players {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,11 +109,11 @@ button.bank-clear {
   border-radius: 8px;
 }
 
-.add-players:first-child {
+.draw-add-players:first-child {
   margin-bottom: 1rem;
 }
 
-button.draw-players, button.add-button {
+.draw-button, .add-button {
   display: block;
   background-color: beige;
   margin: 0.8rem auto 0rem auto;

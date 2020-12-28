@@ -19,25 +19,20 @@ class AddPlayer extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-
-		// if (this.state.player.name === "") {
-		// 	alert("You cannot add a nameless player!");
-		// } else if (this.props.bank.some(player => player.name.toLowerCase() === this.state.player.name.toLowerCase())) {
-		// 	alert(`A player called ${this.state.player.name} already exists in the bank. You can either add them directly from the bank with the pick button, or choose a different name`);
-		// } else if (this.props.players.some(player => player.name.toLowerCase() === this.state.player.name.toLowerCase())) {
-		// 	alert(`A player called ${this.state.player.name} has already been picked. You can add an initial to tell them apart`);
-    // } else {
 		this.props.handleSave({ ...this.state }); // copy the local state	to pass up			
 		this.setState({ player: { name: "", playCount: 0} }); //reset the state
-		// };	
 	}
 
 	render() {
 		return (
-			<form onSubmit={ this.handleSubmit } >
-				<input onChange={ this.handleChange } value={ this.state.player.name } onBlur={this.props.formatInput}/>
-				<button className="add-button">Add</button>
-			</form>
+			<div className="draw-add-players">
+				<h3>Add new</h3>
+				<p>Add new player</p>
+				<form onSubmit={ this.handleSubmit } >
+					<input onChange={ this.handleChange } value={ this.state.player.name } onBlur={this.props.formatInput}/>
+					<button className="add-button">Add</button>
+				</form>
+			</div>
 		);
 	}
 }
