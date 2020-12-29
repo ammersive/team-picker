@@ -5,7 +5,7 @@ import Teams from "./components/Teams";
 
 const App = () => (
   <>
-    <Header>Heading</Header>
+    <Header />
     <About />
     <NewPlayers />
     <Teams />

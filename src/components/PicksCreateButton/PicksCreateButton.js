@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class CreateTeams extends Component {
+class PicksCreateButton extends Component {
   constructor(props) {
     super(props);
 
@@ -20,4 +20,4 @@ class CreateTeams extends Component {
   }
 }
 
-export default CreateTeams;
+export default PicksCreateButton;

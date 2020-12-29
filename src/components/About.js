@@ -1,6 +1,5 @@
 const About = () => (
-  <section className="section-wrapper">
-    <h2 className="section-header">About</h2>
+  <section>
     <div className="overview-wrapper">
       <div className="about-box overview">
         <h3 className="about-subheading">About overview</h3>

@@ -1,5 +1,5 @@
-import BankAddButton from "../BankAddButton/";
-import ClearBankButton from "../ClearBankButton/";
+import BankPickButton from "../BankPickButton/";
+import BankClearButton from "../BankClearButton/";
 
 const Bank = ({ bank }) => {
   
@@ -19,12 +19,12 @@ const Bank = ({ bank }) => {
                 { player.playCount }
               </div> 
               <div className="bank-add-wrap">
-                <BankAddButton index={ index } player={ player }/>
+                <BankPickButton index={ index } player={ player }/>
               </div>
             </li>   
           )) }
         </ul>
-        <ClearBankButton buttonText={ "Clear the bank" }/>
+        <BankClearButton buttonText={ "Clear the bank" }/>
       </>
       : <p className="no-players">Bank is empty</p> }      
     </div>    

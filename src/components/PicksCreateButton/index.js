@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CreateTeams from "./CreateTeams";
+import PicksCreateButton from "./PicksCreateButton";
 import { createTeams } from "../../data/actions";
 
 const mapDispatchToProps = (dispatch) => { 
@@ -8,5 +8,5 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(CreateTeams);
+export default connect(null, mapDispatchToProps)(PicksCreateButton);
 

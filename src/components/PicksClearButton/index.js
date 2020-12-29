@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ClearPickedPlayers from "./ClearPickedPlayers";
+import PicksClearButton from "./PicksClearButton";
 import { clearPickedPlayers } from "../../data/actions";
 
 const mapDispatchToProps = (dispatch) => { 
@@ -8,4 +8,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(ClearPickedPlayers);
+export default connect(null, mapDispatchToProps)(PicksClearButton);

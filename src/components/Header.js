@@ -1,6 +1,6 @@
-const Header = ({ children }) => (
+const Header = () => (
   <header className="header">
-    <h1>{ children }</h1>  
+    <h1>Save our Players</h1>  
   </header>
 );
 export default Header;

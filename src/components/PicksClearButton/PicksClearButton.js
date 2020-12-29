@@ -1,8 +1,8 @@
-const ClearPickedPlayers = ({ clickClearPickedPlayers, buttonText, players }) => (
+const PicksClearButton = ({ clickClearPickedPlayers, buttonText, players }) => (
   players.length > 0 ?
   <button className="clear-picked-players" onClick={ clickClearPickedPlayers }>
   {buttonText}
   </button> :
   null  
 );
-export default ClearPickedPlayers;
+export default PicksClearButton;

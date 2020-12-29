@@ -1,13 +1,13 @@
-import ListPickedPlayers from "../ListPickedPlayers/ListPickedPlayers";
-import CreateTeams from "../CreateTeams";
-import ClearPickedPlayers from "../ClearPickedPlayers";
+import PicksList from "../PicksList/PicksList";
+import PicksCreateButton from "../PicksCreateButton";
+import PicksClearButton from "../PicksClearButton";
 
 const Picks = ({ players }) => (
   <div className="picks">    
     <h3>Picks</h3> 
-    <ListPickedPlayers players={ players }/> 
-    <CreateTeams players={ players }/>
-    <ClearPickedPlayers players={ players } buttonText={ "Clear these players" }/>
+    <PicksList players={ players }/> 
+    <PicksCreateButton players={ players }/>
+    <PicksClearButton players={ players } buttonText={ "Clear these players" }/>
   </div>
 );
 

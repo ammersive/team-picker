@@ -1,5 +1,5 @@
 import { Component } from "react";
-class BankAddButton extends Component {
+class BankPickButton extends Component {
 
   constructor(props) {
     super(props);
@@ -21,4 +21,4 @@ class BankAddButton extends Component {
   }
 }
 
-export default BankAddButton;
+export default BankPickButton;

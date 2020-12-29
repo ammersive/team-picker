@@ -1,4 +1,4 @@
-const ListPickedPlayers = ({ players }) => {
+const PicksList = ({ players }) => {
   let message = "";
 
   if ((players.length % 2 === 0) && (players.length > 0)) {
@@ -23,4 +23,4 @@ const ListPickedPlayers = ({ players }) => {
   );
 };
 
-export default ListPickedPlayers;
+export default PicksList;

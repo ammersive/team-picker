@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ClearBankButton from "../ClearBankButton/ClearBankButton";
+import BankClearButton from "../BankClearButton/BankClearButton";
 import { clearBank } from "../../data/actions";
 
 const mapStateToProps = (state) => {
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ClearBankButton);
+export default connect(mapStateToProps, mapDispatchToProps)(BankClearButton);
