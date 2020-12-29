@@ -8,7 +8,7 @@
 }
 
 .team {
-  background: rgb(6, 48, 6);
+  background: rgb(29, 36, 18);
   border-radius: 20px;
   width: 45%;
   margin: 1rem auto;
@@ -44,10 +44,10 @@
 }
 
 .team-list li:nth-child(odd) {
-  background:rgba(162, 210, 67, 0.85);
+  background:rgba(162, 210, 67);
 }
 .team-list li:nth-child(even) {
-  background:rgba(124, 171, 32, 0.85);
+  background:rgba(124, 171, 32);
 }
 
 .shuffle button, .save button {

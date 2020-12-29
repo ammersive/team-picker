@@ -6,10 +6,6 @@ html {
   background-size: cover;
 }
 
-.header {
-  background: rgb(6, 48, 6);
-}
-
 .section-wrapper {
   margin: 0 auto;
   max-width: 1040px;

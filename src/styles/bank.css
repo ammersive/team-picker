@@ -1,6 +1,6 @@
 .bank {  
-  background: rgb(6, 48, 6);
-  border: solid 10px rgb(6, 48, 6);
+  background: rgb(29, 36, 18);
+  border: solid 10px rgb(29, 36, 18);
   border-radius: 20px;  
   margin: 0rem auto;
   padding-bottom: 0.5rem;
@@ -15,10 +15,10 @@
 }
 
 .bank li:nth-child(odd) {
-  background:rgba(162, 210, 67, 0.85);
+  background:rgba(162, 210, 67);
 }
 .bank li:nth-child(even) {
-  background:rgba(124, 171, 32, 0.85);
+  background:rgba(124, 171, 32);
 }
 
 .bank .player-cell {
@@ -50,7 +50,7 @@
 }
 
 button.bank-clear {  
-  background-color: tomato;
+  background-color: rgb(255, 28, 62);
   margin-top: 0.8rem;
   border: 0px;
   font-size: 0.75rem;

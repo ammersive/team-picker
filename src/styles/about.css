@@ -1,6 +1,12 @@
 .overview-wrapper {
   display: flex;
   margin: 2rem 2.3rem 0rem 2.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .overview-wrapper {
+    margin: 1rem 1rem 0rem 1rem;
+  }
 } 
 
 .about-boxes {
@@ -12,7 +18,7 @@
 
 .about-box {
   width: 20rem;
-  background-color: rgb(6, 48, 6);
+  background-color: rgb(29, 36, 18);
   padding: 1rem;
   margin: 1rem; 
   border-radius: 8px;

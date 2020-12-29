@@ -13,7 +13,7 @@
 }
 
 .player-list-item {
-  background-color: rgb(6, 48, 6);
+  background-color: rgb(29, 36, 18);
   color: beige;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -31,7 +31,7 @@ button.create-button {
 }
 
 button.clear-picked-players {  
-  background-color: tomato;
+  background-color: rgb(255, 28, 62);
   border: 0px;
   font-size: 0.75rem;
   padding: 0.3rem;
