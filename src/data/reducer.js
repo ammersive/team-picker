@@ -1,7 +1,6 @@
-//import initial from "./initial"; // can use initial state for reset
-
 const adjectives = [
   "Flying",
+  "Tremendous",
   "Furious",
   "Surging",
   "Majestic",
@@ -14,12 +13,17 @@ const adjectives = [
   "Stumbling",
   "Doddering",
   "Shambolic",
-  "Drunken"
+  "Drunken",
+  "Glorious",
+  "Magnificent",
+  "Torrential",
+  "Lightning"
 ];
 
 const everydayWords = [
   "Foot",
   "Toe",
+  "Big Toe",
   "Heel",
   "Hamstrung",
   "Knee",
@@ -31,7 +35,8 @@ const everydayWords = [
   "Couch",
   "Sofa",
   "Beer",
-  "Lager"
+  "Lager",
+  "Booze"
 ];
 
 const nouns = [
@@ -47,11 +52,17 @@ const nouns = [
   "Brigade",
   "Foxes",
   "Heroes",
-  "Wolves"
+  "Wolves",
+  "Mob",
+  "Troop",
+  "Legion",
+  "Blokes",
+  "Lassies",
+  "Lads"
 ];
 
+// pickPlayer allows a player from the bank to be added to the picks list, ensuring they haven't been added already.
 const pickPlayer = (state, { player }) => {
-
   if (player.isPicked === false) {
     player.isPicked = true;
     state.players = [...state.players, player];
@@ -62,9 +73,8 @@ const pickPlayer = (state, { player }) => {
   }; 
 };
 
-// Draw reducer ensures lowest plays players are picked first, but that those with the same number of players are picked at random to avoid bias over time.
-const drawPlayer = (state) => {
-  
+// drawPlayer ensures lowest plays players are picked first, but that those with the same number of players are picked at random to avoid bias over time.
+const drawPlayer = (state) => {  
   // If at least one player in the bank remains unpicked:
   if (state.bank.some(player => player.isPicked === false)) {
 
@@ -88,11 +98,10 @@ const drawPlayer = (state) => {
   }; 
 };
 
+// addPlayer handles the addition of new players to the picks list, and includes unique name validation.
 const addPlayer = (state, { player }) => {
-
   // trim trailing whitespace from player name
   player.name = player.name.trimLeft().trimRight();
-  console.log(state.bank);
   
   // prevent nameless players
   if (player.name === "") {
@@ -119,6 +128,7 @@ const addPlayer = (state, { player }) => {
   }; 
 };
 
+// startGame fires when the "Create Teams" button is pressed and moves the view to Teams, hiding the New Players view.
 const startGame = (state) => {
   return {
     ...state,
@@ -126,6 +136,7 @@ const startGame = (state) => {
   };
 }
 
+// clearPickedPlayers clears the picked players list.
 const clearPickedPlayers = (state) => {
   state.bank.forEach(player => resetIsPicked(player));
 
@@ -135,13 +146,14 @@ const clearPickedPlayers = (state) => {
   }; 
 };
 
+// randomiseTeams randomises the picked players list and pushes players to each team list.
 const randomiseTeams = (state) => {
   let players = [...state.players];
   let shuffledPlayers = [];
 
-  // For genuine (pseudo!)randomness, players are **pulled** at random from players list, and then pushed to front of new list.
+  // For genuine (pseudo!)randomness, players are first pulled at random from the players list, and then pushed to the front of a new list.
   // This avoids biasing effects: should players be pushed at random into an empty list, those players pushed first will cluster together before the list grows.
-  // This matters because the player bank always adds players in a predictable order (according to their play-counts) 
+  // This matters because the draw feature always adds players in a predictable order (according to their play-counts). 
   for (let i = players.length; i > 0; i -= 1) {
     let pick = players.splice(Math.floor(Math.random() * i), 1);
     shuffledPlayers.push(pick[0]);
@@ -154,6 +166,7 @@ const randomiseTeams = (state) => {
   };
 };
 
+// generateName randomly generates a triple-barreled team name from three lists of words (see top). The formula is: (1) excessive adjective, (2) mundane/bodily/alcoholic noun, (3) noun collection.
 const generateName = () => {
   let adjective = adjectives[(Math.floor(Math.random() * adjectives.length))];  
   let everyday = everydayWords[(Math.floor(Math.random() * everydayWords.length))]; 
@@ -166,6 +179,7 @@ const generateName = () => {
   }
 }
 
+// Calls generateName() to assign team 1's name
 const generateName1 = (state) => {
   let name = generateName().teamName;
   return {
@@ -174,6 +188,7 @@ const generateName1 = (state) => {
   }; 
 };
 
+// Calls generateName() to assign team 2's name
 const generateName2 = (state) => {
   let name = generateName().teamName;
   return {
@@ -182,21 +197,25 @@ const generateName2 = (state) => {
   }; 
 };
 
+// Increments the playcount of the player passed to the function parameter 
 const incrementPlayCount = (player) => {
   player.playCount = player.playCount + 1;
   return player;
 }
 
+// Resets ths isPicked property of the player passed to the function parameter
 const resetIsPicked = (player) => {
   player.isPicked = false;
   return player;
 }
 
+// Updates the "isNew" property of the player passed to the function parameter
 const updateIsNew = (player) => {
   player.isNew = false;
   return player;
 }
 
+// save increments the scores of all players in the players list with incrementPlayCount(), works out if they are new (and so need to be added to the bank), and resets their other properties with updateIsNew() and resetIsPicked()
 const save = (state) => {
   // Increment the playCount of each player and reset isPicked to false
   state.players.forEach(player => incrementPlayCount(resetIsPicked(player)));
@@ -216,6 +235,7 @@ const save = (state) => {
   }; 
 };
 
+// Clears all records from the bank
 const clearBank = (state) => {
   window.confirm("Do you want to wipe the bank? This will delete all player information.") ? state.bank = [] : state.bank = [...state.bank];
   return {

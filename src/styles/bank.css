@@ -24,7 +24,7 @@
 .bank .player-cell {
   display: inline-block;
   text-align: right;
-  width: 8rem;
+  width: 6rem;
 }
 
 .bank .play-count-cell {

@@ -63,6 +63,7 @@ p.about-text a:hover {
 .button-span {
   font-family: 'Nova Flat', cursive;
   background: beige;
+  white-space: nowrap;
   color: rgb(29, 36, 18);
   padding: 0px 2px;
   margin: 0px 4px;
