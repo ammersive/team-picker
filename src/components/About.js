@@ -20,7 +20,7 @@ const About = () => (
         <h3 className="about-subheading"><i className="fas fa-basketball-ball"></i> Draw by play-count</h3>
         <p className="about-text">The <span className="button-span">Draw</span> feature automatically picks players with the lowest play-counts. If multiple players have the lowest count, the selection is randomised within this set. Any team size is supported, respecting variation in restrictions.</p>
         
-      </div>      
+      </div>   
       <div className="about-box">
         <h3 className="about-subheading"><i className="far fa-futbol"></i> Randomise Teams</h3>
         <p className="about-text">Once happy with player selection, sort players into teams randomly with <span className="button-span">Create teams</span>. Randomise arrangements again with<span className="button-span">Reshuffle teams</span>.</p>
