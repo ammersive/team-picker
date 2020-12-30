@@ -1,9 +1,9 @@
 .overview-wrapper {
   display: flex;
-  margin: 2rem 2.3rem 0rem 2.3rem;
+  margin: 2rem 20% 0rem 20%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .overview-wrapper {
     margin: 1rem 1rem 0rem 1rem;
   }

@@ -4,11 +4,11 @@ import Team2 from "../Team/Team2";
 import Reshuffle from "../Reshuffle/";
 import Save from "../Save/";
 
-const Game = ({ playersChosen }) => (
+const Teams = ({ playersChosen }) => (
   playersChosen ?
   <section className="section-wrapper game-wrapper">
     <header className="section-header">
-      <h2><i class="fas fa-futbol"></i> Teams</h2>
+      <h2><i className="fas fa-futbol"></i> Teams</h2>
     </header>
     <div className="shuffle">
       <Reshuffle />
@@ -28,4 +28,4 @@ const Game = ({ playersChosen }) => (
   : null
 );
 
-export default Game;
+export default Teams;

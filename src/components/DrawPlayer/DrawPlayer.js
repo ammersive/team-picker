@@ -1,4 +1,3 @@
-// disabled={ bank.length === players.length } // this is wrong, the logic is "Is players length equal to bank length, AND everyone in players isn't new?"
 const DrawPlayer = ({ clickDraw }) => (
   <div className="draw-add-players">
     <h3>Draw</h3>
