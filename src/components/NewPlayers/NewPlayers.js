@@ -9,7 +9,7 @@ const NewPlayers = ({ players, bank, player, playersChosen }) => (
 
   <section className="section-wrapper players-wrapper">
     <header className="section-header">
-      <h2>Select Players</h2>
+      <h2><i class="fas fa-futbol"></i> Select Players</h2>
     </header>
     <div className="players-content-wrapper">    
       <div className="bank-wrapper">        

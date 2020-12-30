@@ -8,7 +8,7 @@ const Game = ({ playersChosen }) => (
   playersChosen ?
   <section className="section-wrapper game-wrapper">
     <header className="section-header">
-      <h2>Teams</h2>
+      <h2><i class="fas fa-futbol"></i> Teams</h2>
     </header>
     <div className="shuffle">
       <Reshuffle />
