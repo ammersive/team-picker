@@ -8,8 +8,8 @@ h1 {
   font-family: 'Nova Flat', cursive;
   font-size: 5rem;
   color: rgb(255, 28, 62);
-  padding: 2.5rem 0.5rem;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 1); 
+  padding: 5rem 0.5rem 4rem 0.5rem;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 1); 
 }
 
 .section-header {
@@ -32,11 +32,38 @@ h1 {
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); 
 }
 
+.overview li {
+  list-style: outside;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: beige;
+  margin: 1rem;
+}
+
 .about-text {
   font-size: 0.9rem;
   line-height: 1.5rem;
   color: beige;
   padding-bottom: 0.5rem;
+}
+
+p.about-text a {
+  color: rgb(255, 28, 62);
+}
+p.about-text a:visited {
+  color: rgb(255, 28, 62);
+}
+p.about-text a:hover {
+  color: rgb(255, 88, 113);
+}
+
+.button-span {
+  font-family: 'Nova Flat', cursive;
+  background: beige;
+  color: rgb(29, 36, 18);
+  padding: 0px 2px;
+  margin: 0px 4px;
+  border-radius: 5px;
 }
 
 .bank h3 {
