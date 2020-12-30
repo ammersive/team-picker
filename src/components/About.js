@@ -31,7 +31,7 @@ const About = () => (
       </div>
       <div className="about-box">
         <h3 className="about-subheading">Version 1 information:</h3>
-        <p className="about-text">Player data is stored locally for each browser session. <a href="https://github.com/ammersive/save-our-play/" target="_blank" rel="noreferrer">Version 2</a> (in production) will support storage of player data between sessions, powered by <a href="https://github.com/ammersive/tp-back/" target="_blank" rel="noreferrer">this API</a>.</p>
+        <p className="about-text">Player data is stored locally for each browser session. <a href="https://github.com/ammersive/team-picker" target="_blank" rel="noreferrer">Version 2</a> (in development) will support storage of player data between sessions, powered by <a href="https://github.com/ammersive/tp-back/" target="_blank" rel="noreferrer">this API</a>.</p>
       </div>
     </div>
   </section>
