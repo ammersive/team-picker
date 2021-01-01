@@ -2,7 +2,7 @@ const About = () => (
   <section>
     <div className="overview-wrapper">
       <div className="about-box overview">
-        <h3 className="about-subheading">Pick teams fairly, and plan a series of friendly games where everyone gets their turn.</h3>
+        <h3 className="about-subheading">Pick teams fairly and plan a series of friendly games, where everyone gets their turn.</h3>
         <h3 className="about-subheading"><i className="fas fa-futbol"></i></h3>
         <p className="about-text">Save Our Play is for groups who play a regular series of games, considering:</p>
         <ul>
